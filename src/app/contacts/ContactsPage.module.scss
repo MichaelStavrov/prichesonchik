@@ -1,0 +1,43 @@
+.contactsPage {
+  margin: 0 auto;
+  max-width: var(--content-width-max);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactsRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.contactsName {
+  font-size: 20px;
+}
+
+.tel {
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    color: var(--primary);
+  }
+}

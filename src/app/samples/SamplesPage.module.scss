@@ -1,0 +1,31 @@
+.samplesPage {
+  margin: 0 auto;
+  max-width: var(--content-width-max);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.samplesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.servicesItemImage {
+  border-radius: 6px;
+}
