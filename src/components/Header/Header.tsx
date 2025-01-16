@@ -1,26 +1,34 @@
 'use client';
 
-import React from 'react';
-import { HomeTwoTone } from '@ant-design/icons';
-import styles from './Header.module.scss';
-import Navigation from '../Navigation';
-import OnlineReg from '../OnlineReg';
+import React, { useContext } from 'react';
+import { HomeTwoTone, MenuOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
 import { RoutesMap } from '@/utils/routes';
+import Navigation from '../Navigation';
+import OnlineReg from '../OnlineReg';
+import styles from './Header.module.scss';
+import { MenuContext } from '@/store/MenuContext';
 
 const Header = () => {
   const router = useRouter();
+  const ctx = useContext(MenuContext);
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
+        <MenuOutlined
+          className={styles.burgerBtn}
+          onClick={() => ctx?.setIsOpen(true)}
+        />
         <HomeTwoTone
           className={styles.logo}
           twoToneColor={'#ffffff'}
           onClick={() => router.push(RoutesMap.MAIN)}
         />
         <Navigation />
-        <OnlineReg />
+        <div className={styles.regBtn}>
+          <OnlineReg />
+        </div>
       </div>
     </header>
   );

@@ -1,6 +1,6 @@
 {
   "name": "prichesonchik",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -15,12 +15,14 @@
     "classnames": "^2.5.1",
     "next": "15.1.3",
     "react": "^19.0.0",
+    "react-burger-menu": "^3.1.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
+    "@types/react-burger-menu": "^2.8.7",
     "@types/react-dom": "^19",
     "antd-style": "^3.7.1",
     "eslint": "^9",

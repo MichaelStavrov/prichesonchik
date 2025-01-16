@@ -1,11 +1,12 @@
 import React from 'react';
+import cn from 'classnames';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.colBlock}>
+        <div className={cn(styles.colBlock, styles.colBlockHidden)}>
           <span>Семейный салон красоты в г. Сергиев Посад</span>
           <span> От первой стрижки - до прически!</span>
         </div>
@@ -17,7 +18,7 @@ const Footer = () => {
           г.&nbsp;Сергиев&nbsp;Посад, Вокзальная&nbsp;площадь&nbsp;1,
           ТЦ&nbsp;Преображенский, Цокольный&nbsp;этаж
         </span>
-        <div className={styles.colBlock}>
+        <div className={cn(styles.colBlock, styles.colBlockHiddenMob)}>
           <span>&#169; Copyright 2024.</span>
           <span>Все права защищены!</span>
         </div>

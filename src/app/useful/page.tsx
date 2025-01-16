@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import styles from './UsefulPage.module.scss';
 
 const UsefulPage = () => {
@@ -73,8 +74,16 @@ const UsefulPage = () => {
 
   return (
     <div className={styles.usefulPage}>
+      <Head>
+        <title>Полезная информация парикмахерской Причесончик</title>
+        <meta
+          name='description'
+          content='интересная и полезная информация об услугах'
+          key='desc'
+        />
+      </Head>
       <div className={styles.container}>
-        <h2 className={styles.title}> Полезная информация</h2>
+        <h1 className={styles.title}> Полезная информация</h1>
         <ul className={styles.usefulList}>
           {usefulItems.map(({ title, description }) => (
             <li className={styles.usefulListItem} key={title}>

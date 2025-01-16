@@ -14,7 +14,11 @@ const MainCarousel = () => {
     { name: 'interior4', src: '/carousel-main-img-4.jpg' },
     { name: 'interior', src: '/carousel-main-img-1.jpg' },
     { name: 'interior5', src: '/carousel-main-img-5.jpg' },
-    { name: 'interior7', src: '/carousel-main-img-7.jpg' },
+    { name: 'interior7', src: '/sample-12.jpg' },
+    { name: 'interior7', src: '/sample-15.jpg' },
+    { name: 'interior7', src: '/sample-17.jpg' },
+    { name: 'interior7', src: '/sample-19.jpg' },
+    { name: 'interior7', src: '/sample-21.jpg' },
   ];
 
   return (
@@ -23,13 +27,17 @@ const MainCarousel = () => {
         arrows
         autoplay
         autoplaySpeed={3000}
-        adaptiveHeight
+        // adaptiveHeight
         draggable
         dots={false}
       >
         {carouselItems.map(({ name, src }) => (
           <Image
             className={styles.img}
+            // style={{
+            //   width: '100%',
+            //   height: 'auto',
+            // }}
             key={name}
             src={src}
             alt={name}

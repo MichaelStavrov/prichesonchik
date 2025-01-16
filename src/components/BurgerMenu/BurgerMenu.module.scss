@@ -1,0 +1,22 @@
+.wrapper {
+  width: 400px !important;
+  height: 100%;
+  padding: 30px 40px;
+  background-color: white;
+
+  @media (max-width: 530px) {
+    width: 100% !important;
+  }
+}
+
+.logo {
+  margin: 0 auto 30px;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+  color: var(--primary) !important;
+}

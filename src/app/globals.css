@@ -1,11 +1,24 @@
 :root {
   /* points */
   --content-width-max: 1024px;
+
   /* colors */
   --background: #ffffff;
   --font: #171717;
   --primary: #f7324f;
 
+
+  @media (max-width: 1024px) {
+    --content-width-max: 800px;
+  }
+
+  @media (max-width: 800px) {
+    --content-width-max: 530px;
+  }
+
+  @media (max-width: 530px) {
+    --content-width-max: 320px;
+  }
 }
 
 

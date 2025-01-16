@@ -1,15 +1,21 @@
 'use client';
 
-import React from 'react';
+import React, { FC, useContext } from 'react';
 import { Button } from 'antd';
 import cn from 'classnames';
 import { usePathname, useRouter } from 'next/navigation';
 import { RoutesMap } from '@/utils/routes';
 import styles from './Navigation.module.scss';
+import { MenuContext } from '@/store/MenuContext';
 
-const Navigation = () => {
+interface NavigationProps {
+  burgerView?: boolean;
+}
+
+const Navigation: FC<NavigationProps> = ({ burgerView }) => {
   const router = useRouter();
   const pathname = usePathname();
+  const ctx = useContext(MenuContext);
 
   interface NavRoutes {
     path: string;
@@ -24,6 +30,28 @@ const Navigation = () => {
     { path: RoutesMap.USEFUL, label: 'Полезное' },
     { path: RoutesMap.CONTACTS, label: 'Контакты' },
   ];
+
+  const handleRouteClick = (path: string) => {
+    ctx?.setIsOpen(false);
+    router.push(path);
+  };
+
+  if (burgerView) {
+    return (
+      <nav className={styles.navigationBurger}>
+        {routes.map(({ path, label }) => (
+          <Button
+            key={path}
+            type='link'
+            className={styles.navBtnBurger}
+            onClick={() => handleRouteClick(path)}
+          >
+            {label}
+          </Button>
+        ))}
+      </nav>
+    );
+  }
 
   return (
     <nav className={styles.navigation}>

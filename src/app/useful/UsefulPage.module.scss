@@ -11,6 +11,11 @@
   background-color: white;
   padding: 20px 40px;
   border-radius: 4px;
+
+  @media (Max-width: 800px) {
+    padding: 20px;
+    border-radius: 16px;
+  }
 }
 
 .title {

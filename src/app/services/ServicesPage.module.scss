@@ -8,12 +8,24 @@
   background-color: white;
   border-radius: 8px;
   padding: 20px 40px;
+
+  @media (max-width: 800px) {
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 .servicesGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 20px;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .title {
@@ -37,6 +49,23 @@
 .servicesItemContent {
   display: flex;
   gap: 20px;
+
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  @media (max-width: 530px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.servicesItemContentContainer {
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .servicesItemContentColoringLeftBlock {
@@ -63,4 +92,10 @@
 
 .servicesItemImage {
   border-radius: 6px;
+}
+
+.serviceBlockArticle {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

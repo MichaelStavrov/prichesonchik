@@ -16,6 +16,10 @@
       background-color: #f9ccd3;
     }
   }
+
+  @media (max-width: 1024px) {
+    min-width: 164px;
+  }
 }
 
 

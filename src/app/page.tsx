@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { CheckOutlined } from '@ant-design/icons';
+import Head from 'next/head';
 import MainCarousel from '@/components/MainCarousel';
 import styles from './page.module.css';
 import SimpleCard from '@/components/SimpleCard';
@@ -6,33 +8,41 @@ import SimpleCard from '@/components/SimpleCard';
 export default function Home() {
   const advantages = [
     {
-      title: ' Специализированный персонал',
+      title: 'Творческий подход персонала',
       description:
-        ' Обязательная часть подготовки наших мастеров — психологические курсы, после которых они умеют находить подход ко всем деткам, даже к самым маленьким и непоседливым.',
+        'Наши мастера готовы к любым реакциям вашего ребенка. Они знают, как успокоить, развеселить и увлечь ребенка процессом стрижки. Они не откажут в стрижке, если ребенок плачет или дерется. А найдут способ подружиться с ребенком и сделать стрижку по запросу родителей.',
       image: '/advatnages-item-1.png',
     },
     {
-      title: 'Детки увлечены мультиками',
+      title: 'Парк развлечений для детей!',
       description:
-        'В наших студиях море игрушек, вместо кресел — машинки, вместо зеркал — телевизоры. Дети ходят в «Воображулю» как на праздник и даже не замечают, что их стригут.',
+        'Игровой уголок, развивающие журналы, музыкальные кресла машинки, мультики, сладкие подарки и грамоты. Похоже на описание игровой, но все это есть в нашем салоне! Ребенок даже не заметит, что его стригут, потому что вокруг столько интересного! А еще у нас продаются воздушные шарики и игрушки!',
       image: '/advatnages-item-2.png',
     },
     {
-      title: 'Мама и папа тоже стригутся',
+      title: 'Взрослым можно и нужно!',
       description:
-        'Наши мастера стригут не только деток, но и взрослых. К нам приходят наводить красоту всей семьёй, и мы за это дарим хорошие скидки.',
-      image: '/advatnages-item-2.png',
+        'Семейная стрижка - идеальное начало дня!  По очереди постриглись ребенок, мама и папа, и пошли красивые гулять и отдыхать. Или найдите время для себя, и запишитесь на модную мужскую стрижку или трендовое женсоке окрашивание! Оказываем полный спектр самых востребованных бьюти услуг для взрослых.',
+      image: '/advatnages-item-3.png',
     },
     {
-      title: 'Чистота и уют',
+      title: 'Чистота и красота',
       description:
-        'Оборудование в «Воображуле» — собственного производства, абсолютно не травмоопасное. А инструменты постоянно дезинфицируются и стерилизуются.',
-      image: '/advatnages-item-2.png',
+        'Мы тщательно продумали дизайн помещения, чтобы гостям было у нас комфортно, уютно и удобно. Цветовая гамма салона подарит вам хорошее настроение и заряд энергии! А исключительная чистота помещения и оборудования гарантируют вам безопасность всех процедур.',
+      image: '/advatnages-item-4.png',
     },
   ];
 
   return (
     <div className={styles.content}>
+      <Head>
+        <title>Парикмахерская для детей и взрослых - Причесончик</title>
+        <meta
+          name='description'
+          content='Детские стрижки, детские прически, взрослые стрижки, окрашивание, маникюр, аквагрим'
+          key='desc'
+        />
+      </Head>
       <div className={styles.rowBlock}>
         <div className={styles.infoCardsBlock}>
           <SimpleCard>
@@ -41,15 +51,22 @@ export default function Home() {
                 <h1 className={styles.title}>
                   Добро пожаловать в &quot;Причесончик&quot; в Сергиевом Посаде!
                 </h1>
-                <Image src='/attr2.png' alt='' width={96} height={96} />
+                <Image
+                  className={styles.mainInfoIcon}
+                  src='/attr2.png'
+                  alt=''
+                  width={96}
+                  height={96}
+                />
               </div>
               <p>
-                Мы - семейная сетевая парикмахерская, которая прекрасно знает,
-                как сделать волосы ваших детей красивыми и стильными.
+                Наш семейный салон красоты приветствует вас и приглашает в мир
+                красивых стрижек для детей и взрослых!
               </p>
               <p>
-                Наша цель - сделать каждого ребенка счастливым и уверенным в
-                себе с помощью уникального стиля и оригинальных причесок.
+                Широкий выбор услуг, дружелюбная атмосфера и внимание к
+                пожеланиям сделают детей и родителей довольными, счастливыми и
+                красивыми!
               </p>
             </div>
           </SimpleCard>
@@ -57,19 +74,44 @@ export default function Home() {
             <div className={styles.mainInfoText}>
               <div className={styles.titleContainer}>
                 <p className={styles.title}>
-                  Чем отличается детский фирменный салон от обычной
-                  парикмахерской?
+                  Чем отличается семейный салон от обычной парикмахерской?
                 </p>
                 <Image src='/attr3.png' alt='' width={96} height={96} />
               </div>
+              <p>В салоне есть все для удобства детей:</p>
+              <ul className={styles.list}>
+                <li className={styles.listItem}>
+                  <CheckOutlined className={styles.checkIcon} />
+                  <span>Специальные кресла машинки разных цветов</span>
+                </li>
+                <li className={styles.listItem}>
+                  <CheckOutlined className={styles.checkIcon} />
+                  <span>Трансляция мультфильмов</span>
+                </li>
+                <li className={styles.listItem}>
+                  <CheckOutlined className={styles.checkIcon} />
+                  <span>Яркий дизайн помещения</span>
+                </li>
+                <li className={styles.listItem}>
+                  <CheckOutlined className={styles.checkIcon} />
+                  <span>Игровой уголок</span>
+                </li>
+                <li className={styles.listItem}>
+                  <CheckOutlined className={styles.checkIcon} />
+                  <span>Сладкий подарок после стрижки</span>
+                </li>
+              </ul>
               <p>
-                Мы понимаем, что поход к парикмахеру может быть страшным для
-                детей. Поэтому наши кресла-машинки способны превратить процесс
-                стрижки в увлекательное и интересное мероприятие.
+                В детской парикмахерской ребенок не испугается машинки или фена!
+                Индивидуальный подход мастеров превратит рядовую стрижку в
+                фантастическое приключение, которое захочется повторять снова и
+                снова!
               </p>
               <p>
-                У нас есть игровой уголок и телевизор, чтобы детки во время
-                стрижки смотрели мультики.
+                Также в салоне &quot;Причесончик&quot; можно подстричься всей
+                семьей за один визит! Мы предоставляем полный спектр
+                парикмахерских услуг для взрослых. Также мы щедры на различные
+                акции. Экономьте время и бюджет вместе с нами!
               </p>
             </div>
           </SimpleCard>
@@ -78,7 +120,7 @@ export default function Home() {
       </div>
       <div className={styles.advantagesBlock}>
         <p className={styles.advantagesBlockTitle}>
-          Почему вам нужно именно к нам?
+          Почему у нас лучшее место для стрижек?
         </p>
         <div className={styles.gridContainer}>
           {advantages.map(({ title, description, image }) => (
@@ -86,7 +128,7 @@ export default function Home() {
               <span className={styles.advantagesBlockItemTitle}>{title}</span>
               <Image src={image} alt='' width={160} height={160} />
 
-              <p>{description}</p>
+              <p className={styles.advantagesBlockItemDesc}>{description}</p>
             </div>
           ))}
         </div>

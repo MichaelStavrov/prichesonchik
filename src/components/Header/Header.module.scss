@@ -15,9 +15,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 800px) {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+}
+
+.burgerBtn {
+  display: none !important;
+  color: white !important;
+  font-size: 30px;
+
+  @media (max-width: 800px) {
+    display: block !important;
+  }
 }
 
 .logo {
   font-size: 28px;
   cursor: pointer;
+}
+
+.regBtn {
+  @media (max-width: 800px) {
+    margin-left: auto;
+  }
 }

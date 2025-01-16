@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { StarFilled } from '@ant-design/icons';
 import styles from './ReviewsPage.module.scss';
 
@@ -95,8 +96,16 @@ const ReviewsPage = () => {
 
   return (
     <div className={styles.reviewsPage}>
+      <Head>
+        <title>Отзывы о Причесончике</title>
+        <meta
+          name='description'
+          content='Отзывы клиентов о парикмахерской Причесончик'
+          key='desc'
+        />
+      </Head>
       <div className={styles.container}>
-        <h2 className={styles.title}>Отзывы наших клиентов</h2>
+        <h1 className={styles.title}>Отзывы наших клиентов</h1>
         <ul className={styles.reviewsList}>
           {reviewsItems.map(({ name, review }) => (
             <li className={styles.reviewsListItem} key={review}>

@@ -11,6 +11,11 @@
   background-color: white;
   padding: 20px 40px;
   border-radius: 4px;
+
+  @media (Max-width: 800px) {
+    padding: 20px;
+    border-radius: 16px;
+  }
 }
 
 .title {
@@ -27,6 +32,7 @@
 .contactsRow {
   display: flex;
   align-items: flex-end;
+  align-items: center;
   gap: 12px;
 }
 
@@ -40,4 +46,9 @@
   &:hover {
     color: var(--primary);
   }
+}
+
+.map {
+  display: flex;
+  max-width: 100%;
 }

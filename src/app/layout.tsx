@@ -17,9 +17,9 @@ import {
 import styles from './page.module.css';
 import SimpleCard from '@/components/SimpleCard';
 import OnlineReg from '@/components/OnlineReg';
-import Link from 'next/link';
-import { RoutesMap } from '@/utils/routes';
 import Footer from '@/components/Footer';
+import Context from '@/store/MenuContext';
+import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
 
 const inter = Inter({ subsets: ['cyrillic'] });
 
@@ -53,86 +53,133 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const LOGO_WIDTH = 340;
-  const LOGO_HEIGHT = 340 / 1.23;
+  const LOGO_HEIGHT = LOGO_WIDTH / 1.23;
 
   return (
     <html lang='ru'>
       <ConfigProvider theme={theme}>
         <body className={inter.className}>
-          <Header />
-          <main className={styles.main}>
-            <div className={styles.mainContainer}>
-              <div className={styles.rowContainer}>
-                <div className={styles.colContainer}>
-                  <div className={cn(shantellSans.className, styles.promo)}>
-                    От первой стрижки до прически!
-                  </div>
-                  <SimpleCard>
-                    <div className={styles.servicesList}>
-                      {services.map(({ name }) => (
-                        <Link
-                          key={name}
-                          className={styles.servicesListItem}
-                          href={RoutesMap.SERVICES}
-                        >
-                          <CheckCircleOutlined
-                            className={styles.servicesListItemIcon}
-                          />
-                          <span>{name}</span>
-                        </Link>
-                      ))}
+          <Context>
+            <div className={styles.burgerMenu}>
+              <BurgerMenu />
+            </div>
+            <Header />
+            <main className={styles.main}>
+              <div className={styles.mainContainer}>
+                <div className={styles.rowContainer}>
+                  <div
+                    className={cn(styles.colContainer, styles.colContainer1)}
+                  >
+                    <div className={cn(shantellSans.className, styles.promo)}>
+                      От первой стрижки до прически!
                     </div>
-                  </SimpleCard>
-                </div>
-                <Image
-                  src='/logo.png'
-                  alt='логотип'
-                  width={LOGO_WIDTH}
-                  height={LOGO_HEIGHT}
-                  priority
-                />
-                <div className={styles.colContainer}>
-                  <div className={cn(shantellSans.className, styles.promo)}>
-                    Для детей и взрослых
-                  </div>
+                    <SimpleCard>
+                      <div className={styles.mobContainerServicesContacts}>
+                        <div className={styles.servicesList}>
+                          {services.map(({ name }) => (
+                            <span
+                              key={name}
+                              className={styles.servicesListItem}
+                            >
+                              <CheckCircleOutlined
+                                className={styles.servicesListItemIcon}
+                              />
+                              <span>{name}</span>
+                            </span>
+                          ))}
+                        </div>
 
-                  <SimpleCard fullHeight>
-                    <div className={styles.contacts}>
-                      <div className={styles.contactsItem}>
-                        <PhoneFilled className={styles.contactsItemIcon1} />
-                        <a href='tel:+79252551949' className={styles.tel}>
-                          +7&nbsp;(925)&nbsp;255&nbsp;19&nbsp;49
-                        </a>
+                        <div
+                          className={cn(styles.contacts, styles.contactsHidden)}
+                        >
+                          <div className={styles.contactsItem}>
+                            <PhoneFilled className={styles.contactsItemIcon1} />
+                            <a href='tel:+79252551949' className={styles.tel}>
+                              +7&nbsp;(925)&nbsp;255&nbsp;19&nbsp;49
+                            </a>
+                          </div>
+                          <div className={styles.contactsItem}>
+                            <ClockCircleFilled
+                              className={styles.contactsItemIcon2}
+                            />
+                            <span>Ежедневно с&nbsp;10.00 до&nbsp;20.00</span>
+                          </div>
+                          <div className={styles.contactsItem}>
+                            <CompassFilled
+                              className={styles.contactsItemIcon3}
+                            />
+                            <span>
+                              г.&nbsp;Сергиев&nbsp;Посад, <br /> Вокзальная
+                              площадь&nbsp;1, <br /> ТЦ&nbsp;Преображенский
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div className={styles.contactsItem}>
-                        <ClockCircleFilled
-                          className={styles.contactsItemIcon2}
-                        />
-                        <span>Ежедневно с&nbsp;10.00 до&nbsp;20.00</span>
-                      </div>
-                      <div className={styles.contactsItem}>
-                        <CompassFilled className={styles.contactsItemIcon3} />
-                        <span>
-                          г.&nbsp;Сергиев&nbsp;Посад, <br /> Вокзальная
-                          площадь&nbsp;1, <br /> ТЦ&nbsp;Преображенский
-                        </span>
-                      </div>
+                    </SimpleCard>
+                  </div>
+                  <Image
+                    className={styles.logo}
+                    src='/logo.png'
+                    alt='логотип'
+                    width={LOGO_WIDTH}
+                    height={LOGO_HEIGHT}
+                    priority
+                  />
+                  <div
+                    className={cn(styles.colContainer, styles.colContainer2)}
+                  >
+                    <div
+                      className={cn(
+                        shantellSans.className,
+                        styles.promo,
+                        styles.promoHidden
+                      )}
+                    >
+                      Для детей и взрослых
                     </div>
-                  </SimpleCard>
+
+                    <div className={styles.contactsBlock}>
+                      <SimpleCard fullHeight>
+                        <div className={styles.contacts}>
+                          <div className={styles.contactsItem}>
+                            <PhoneFilled className={styles.contactsItemIcon1} />
+                            <a href='tel:+79252551949' className={styles.tel}>
+                              +7&nbsp;(925)&nbsp;255&nbsp;19&nbsp;49
+                            </a>
+                          </div>
+                          <div className={styles.contactsItem}>
+                            <ClockCircleFilled
+                              className={styles.contactsItemIcon2}
+                            />
+                            <span>Ежедневно с&nbsp;10.00 до&nbsp;20.00</span>
+                          </div>
+                          <div className={styles.contactsItem}>
+                            <CompassFilled
+                              className={styles.contactsItemIcon3}
+                            />
+                            <span>
+                              г.&nbsp;Сергиев&nbsp;Посад, <br /> Вокзальная
+                              площадь&nbsp;1, <br /> ТЦ&nbsp;Преображенский
+                            </span>
+                          </div>
+                        </div>
+                      </SimpleCard>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <AntdRegistry>{children}</AntdRegistry>
-            <div className={styles.regBtn}>
-              <OnlineReg variant='animated' />
-            </div>
-          </main>
-          <Footer />
-          <script
-            defer
-            type='text/javascript'
-            src='https://dikidi.net/assets/js/widget_record/widget2.min.js'
-          ></script>
+              <AntdRegistry>{children}</AntdRegistry>
+              <div className={styles.regBtn}>
+                <OnlineReg variant='animated' />
+              </div>
+            </main>
+            <Footer />
+            <script
+              defer
+              type='text/javascript'
+              src='https://dikidi.net/assets/js/widget_record/widget2.min.js'
+            ></script>
+          </Context>
         </body>
       </ConfigProvider>
     </html>

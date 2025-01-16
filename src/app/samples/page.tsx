@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import styles from './SamplesPage.module.scss';
 
 const SamplesPage = () => {
@@ -12,7 +13,6 @@ const SamplesPage = () => {
     { name: 'пример стрижки', imgSrc: '/sample-5.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-6.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-7.jpg' },
-    { name: 'пример стрижки', imgSrc: '/sample-8.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-9.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-10.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-11.jpg' },
@@ -26,17 +26,26 @@ const SamplesPage = () => {
     { name: 'пример стрижки', imgSrc: '/sample-19.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-20.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-21.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-22.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-3.jpg' },
   ];
 
   return (
     <div className={styles.samplesPage}>
+      <Head>
+        <title>Примеры работ парикмахерской Причесончика</title>
+        <meta name='description' content='Фотогалерея' key='desc' />
+      </Head>
       <div className={styles.container}>
-        <h2 className={styles.title}>Фотогалерея</h2>
+        <h1 className={styles.title}>Фотогалерея</h1>
         <div className={styles.samplesContainer}>
           {samples.map(({ name, imgSrc }) => (
             <Image
               className={styles.servicesItemImage}
+              // style={{
+              //   width: '100%',
+              //   height: 'auto',
+              // }}
               key={imgSrc}
               src={imgSrc}
               alt={name}

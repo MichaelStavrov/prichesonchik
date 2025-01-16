@@ -1,5 +1,13 @@
 .carousel {
   border-radius: 8px;
+
+  @media (Max-width: 800px) {
+    order: 1;
+  }
+
+  @media (max-width: 530px) {
+    max-width: 320px;
+  }
 }
 
 .img {

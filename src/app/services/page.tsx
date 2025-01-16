@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Head from 'next/head';
 import styles from './ServicesPage.module.scss';
 import SimpleCard from '@/components/SimpleCard';
 
@@ -46,7 +47,22 @@ const ServicesPage = () => {
 
   const aquagrim = [
     {
-      name: 'Отличный способ разнообразить праздник и поднять настроение! Рисунки, узоры, маски героев – подарят удивительную возможность каждому ребенку перевоплотиться и получить удовольствие от праздника. С красочным гримом радость будет бесконечной, а приключения – невероятными!',
+      name: (
+        <span className={styles.serviceBlockArticle}>
+          <span>
+            Отличный способ разнообразить праздник и поднять настроение!
+          </span>
+          <span>
+            Рисунки, узоры, маски героев – подарят удивительную возможность
+            каждому ребенку перевоплотиться и получить удовольствие от
+            праздника.
+          </span>
+          <span>
+            С красочным гримом радость будет бесконечной, а приключения –
+            невероятными!
+          </span>
+        </span>
+      ),
       price: 'от 300',
     },
   ];
@@ -76,6 +92,30 @@ const ServicesPage = () => {
     { name: 'Рисунок на ногте', price: 'от 300' },
     { name: 'Необычная форма ногтей', price: 'от 2 700' },
     { name: 'Снятие чужой работы', price: 'от 300' },
+  ];
+
+  const piercing = [
+    {
+      name: (
+        <span className={styles.serviceBlockArticle}>
+          <span>Прокол ушей детям и взрослым.</span>
+          <span>
+            Прокол осуществляется сертифицированной системой Studex R993.
+            Инструмент гарантирует полную стерильность и качественный быстрый
+            прокол.
+          </span>
+          <span>
+            Оригинальный механизм позволяет раздвинуть ткани, обеспечивая
+            минимальный дискомфорт и быстрое заживление.
+          </span>
+          <span>
+            В стоимость прокола входят оригинальные серьги из гипоаллергенной
+            нержавеющей стали. В подарок грамота за смелость!
+          </span>
+        </span>
+      ),
+      price: '2100',
+    },
   ];
 
   const services = [
@@ -110,6 +150,12 @@ const ServicesPage = () => {
       imageSrc: '/services-item-img-coloring.jpg',
     },
     {
+      id: 'piercing',
+      items: piercing,
+      title: 'Прокол ушей',
+      imageSrc: '/services-item-img-piercing.jpg',
+    },
+    {
       id: 'aquagrim',
       items: aquagrim,
       title: 'Аквагрим',
@@ -127,16 +173,27 @@ const ServicesPage = () => {
 
   return (
     <div className={styles.servicesPage}>
-      <h2 className={styles.title}>Наши услуги и цены</h2>
+      <Head>
+        <title>Цены и услуги парикмахерской Причесончик</title>
+        <meta
+          name='description'
+          content='стоимость и цены на услуги салона красоты'
+          key='desc'
+        />
+      </Head>
+      <h1 className={styles.title}>Наши услуги и цены</h1>
       <div className={styles.servicesGrid}>
         {services.map(({ id, items, title, imageSrc }) => (
           <SimpleCard key={id} justifyContent='space-between'>
             <div className={styles.servicesItemBlock}>
-              <h3 className={styles.servicesItemTitle}>{title}</h3>
-              {id === 'aquagrim' ? (
+              <h2 className={styles.servicesItemTitle}>{title}</h2>
+              {['aquagrim', 'piercing'].includes(id) ? (
                 <div>
                   {items.map(({ name, price }) => (
-                    <div className={styles.servicesItemContent} key={name}>
+                    <div
+                      className={styles.servicesItemContent}
+                      key={name.toString()}
+                    >
                       <div
                         className={styles.servicesItemContentColoringLeftBlock}
                       >
@@ -155,9 +212,12 @@ const ServicesPage = () => {
                 </div>
               ) : (
                 <div className={styles.servicesItemContent}>
-                  <div>
+                  <div className={styles.servicesItemContentContainer}>
                     {items.map(({ name, price }) => (
-                      <div key={name} className={styles.servicesItemRow}>
+                      <div
+                        key={name.toString()}
+                        className={styles.servicesItemRow}
+                      >
                         <span>{name}</span>
                         <span className={styles.servicesItemPrice}>
                           {price} &#8381;
