@@ -13,4 +13,8 @@
 .img {
   border: 3px white solid;
   border-radius: 8px;
+
+  @media (max-width: 530px) {
+    height: 400px !important;
+  }
 }
