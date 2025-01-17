@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { CheckOutlined } from '@ant-design/icons';
-import Head from 'next/head';
 import MainCarousel from '@/components/MainCarousel';
 import styles from './page.module.css';
 import SimpleCard from '@/components/SimpleCard';
@@ -35,14 +34,6 @@ export default function Home() {
 
   return (
     <div className={styles.content}>
-      <Head>
-        <title>Парикмахерская для детей и взрослых - Причесончик</title>
-        <meta
-          name='description'
-          content='Детские стрижки, детские прически, взрослые стрижки, окрашивание, маникюр, аквагрим'
-          key='desc'
-        />
-      </Head>
       <div className={styles.rowBlock}>
         <div className={styles.infoCardsBlock}>
           <SimpleCard>

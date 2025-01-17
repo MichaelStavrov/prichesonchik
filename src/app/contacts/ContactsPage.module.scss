@@ -27,6 +27,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 530px) {
+    max-width: 100%;
+    font-size: 20px;
+    gap: 30px;
+  }
 }
 
 .contactsRow {
@@ -34,10 +40,19 @@
   align-items: flex-end;
   align-items: center;
   gap: 12px;
+
+  @media (max-width: 530px) {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 .contactsName {
   font-size: 20px;
+}
+
+.contactsAddress {
+  text-align: center;
 }
 
 .tel {
@@ -49,6 +64,34 @@
 }
 
 .map {
+  width: 100%;
   display: flex;
-  max-width: 100%;
+}
+
+.mapContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.link1,
+.link2,
+.link3 {
+  position: 'absolute';
+  top: 0;
+  color: '#eee';
+  font-size: '12px';
+}
+
+.link2 {
+  top: 14px;
+}
+
+.link3 {
+  top: 28px;
+}
+
+.mapFrame {
+  width: 100% !important;
+  height: 300px;
 }

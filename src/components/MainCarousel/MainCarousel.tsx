@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Carousel } from 'antd';
 import styles from './MainCarousel.module.scss';
@@ -23,21 +25,10 @@ const MainCarousel = () => {
 
   return (
     <div className={styles.carousel} style={{ width: IMAGE_WIDTH + 100 }}>
-      <Carousel
-        arrows
-        autoplay
-        autoplaySpeed={3000}
-        // adaptiveHeight
-        draggable
-        dots={false}
-      >
+      <Carousel arrows autoplay autoplaySpeed={3000} dots={false}>
         {carouselItems.map(({ name, src }) => (
           <Image
             className={styles.img}
-            // style={{
-            //   width: '100%',
-            //   height: 'auto',
-            // }}
             key={name}
             src={src}
             alt={name}

@@ -18,7 +18,7 @@ const ContactsPage = () => {
         <div className={styles.contactsContainer}>
           <div className={styles.contactsRow}>
             <span className={styles.contactsName}>Адрес: </span>
-            <span>
+            <span className={styles.contactsAddress}>
               г.&nbsp;Сергиев&nbsp;Посад, Вокзальная&nbsp;площадь&nbsp;1,
               ТЦ&nbsp;Преображенский, Цокольный&nbsp;этаж
             </span>
@@ -38,55 +38,39 @@ const ContactsPage = () => {
           <div className={styles.contactsRow}>
             <span className={styles.contactsName}>ВКонтакте:</span>
             <a
-              href='https://vk.com/prichesonchik_sergievposad'
+              href='https://vk.cc/cHnA4n'
               target='_blank'
               rel='noopener noreferrer'
               className={styles.tel}
             >
-              https://vk.com/prichesonchik_sergievposad
+              https://vk.cc/cHnA4n
             </a>
           </div>
         </div>
         <div className={styles.map}>
-          <div style={{ position: 'relative', overflow: 'hidden' }}>
-            <a
+          <div className={styles.mapContainer}>
+            {/* <a
+              className={styles.link1}
               href='https://yandex.ru/maps/org/prichesonchik/66851843542/?utm_medium=mapframe&utm_source=maps'
-              style={{
-                color: '#eee',
-                fontSize: '12px',
-                position: 'absolute',
-                top: 0,
-              }}
             >
               Причесончик
             </a>
             <a
+              className={styles.link2}
               href='https://yandex.ru/maps/10752/sergiev-posad/category/children_hairdresser/161532621367/?utm_medium=mapframe&utm_source=maps'
-              style={{
-                color: '#eee',
-                fontSize: '12px',
-                position: 'absolute',
-                top: '14px',
-              }}
             >
               Детский салон-парикмахерская в Сергиевом Посаде
             </a>
             <a
+              className={styles.link3}
               href='https://yandex.ru/maps/10752/sergiev-posad/category/hairdresser/184105812/?utm_medium=mapframe&utm_source=maps'
-              style={{
-                color: '#eee',
-                fontSize: '12px',
-                position: 'absolute',
-                top: '28px',
-              }}
             >
               Парикмахерская в Сергиевом Посаде
-            </a>
+            </a> */}
 
             <iframe
+              className={styles.mapFrame}
               src='https://yandex.ru/map-widget/v1/org/prichesonchik/66851843542/?indoorLevel=1&ll=38.135065%2C56.301379&z=16.69'
-              width={800}
-              height={300}
               frameBorder={0}
               allowFullScreen
             ></iframe>

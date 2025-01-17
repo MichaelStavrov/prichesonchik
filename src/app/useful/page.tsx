@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { CheckOutlined } from '@ant-design/icons';
 import styles from './UsefulPage.module.scss';
 
 const UsefulPage = () => {
@@ -40,19 +41,31 @@ const UsefulPage = () => {
             Оптимальным сроком для прокола ушей является возраст{' '}
             <b>от 6 месяцев</b>. И это действительно подтверждается врачами:
           </p>
-          <ul>
-            <li>процедура проходит быстро и безболезненно;</li>
-            <li>
-              риск образования рубцов или шрамов в этом возрасте практически
-              равен нулю;
+          <ul className={styles.list}>
+            <li className={styles.listItem}>
+              <CheckOutlined className={styles.checkIcon} />
+              <span>процедура проходит быстро и безболезненно;</span>
             </li>
-            <li>
-              нет риска задеть какие-либо точки на мочке уха, которые могут
-              привести к ухудшению состояния ребенка;
+            <li className={styles.listItem}>
+              <CheckOutlined className={styles.checkIcon} />
+              <span>
+                риск образования рубцов или шрамов в этом возрасте практически
+                равен нулю;
+              </span>
             </li>
-            <li>
-              ранки заживают без болезненных ощущений, и процесс восстановления
-              тканей протекает очень быстро.
+            <li className={styles.listItem}>
+              <CheckOutlined className={styles.checkIcon} />
+              <span>
+                нет риска задеть какие-либо точки на мочке уха, которые могут
+                привести к ухудшению состояния ребенка;
+              </span>
+            </li>
+            <li className={styles.listItem}>
+              <CheckOutlined className={styles.checkIcon} />
+              <span>
+                ранки заживают без болезненных ощущений, и процесс
+                восстановления тканей протекает очень быстро.
+              </span>
             </li>
           </ul>
           <p>
