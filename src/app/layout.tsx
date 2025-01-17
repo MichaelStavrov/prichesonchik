@@ -65,6 +65,7 @@ export default function RootLayout({
           content='Детские стрижки, детские прически, взрослые стрижки, окрашивание, маникюр, аквагрим'
           key='desc'
         />
+        <link rel='icon' href='/favicon-32x32.png' />
       </Head>
       <ConfigProvider theme={theme}>
         <body className={inter.className}>
