@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import styles from './ServicesPage.module.scss';
 import SimpleCard from '@/components/SimpleCard';
+import { SERVICES_ID } from '../layout';
 
 const ServicesPage = () => {
   const servicesGirls = [
@@ -34,7 +35,7 @@ const ServicesPage = () => {
     { name: 'Художественный выстриг', price: 'от 200' },
   ];
 
-  const servicesWomens = [
+  const servicesWomans = [
     { name: 'Стрижка модельная', price: 'от 700' },
     { name: 'Стрижка концов', price: 'от 500' },
     { name: 'Стрижка чёлки', price: 'от 200' },
@@ -120,49 +121,49 @@ const ServicesPage = () => {
 
   const services = [
     {
-      id: 'girls',
+      id: SERVICES_ID.GIRLS,
       items: servicesGirls,
       title: 'Девочки',
       imageSrc: '/services-item-img-girl.jpg',
     },
     {
-      id: 'boys',
+      id: SERVICES_ID.BOYS,
       items: servicesBoys,
       title: 'Мальчики',
       imageSrc: '/services-item-img-boy.jpg',
     },
     {
-      id: 'mens',
+      id: SERVICES_ID.MENS,
       items: servicesMens,
       title: 'Мужской зал',
       imageSrc: '/services-item-img-men.jpg',
     },
     {
-      id: 'womens',
-      items: servicesWomens,
+      id: SERVICES_ID.WOMANS,
+      items: servicesWomans,
       title: 'Женский зал',
       imageSrc: '/services-item-img-women.jpg',
     },
     {
-      id: 'coloring',
+      id: SERVICES_ID.COLORING,
       items: coloring,
       title: 'Окрашивание',
       imageSrc: '/services-item-img-coloring.jpg',
     },
     {
-      id: 'piercing',
+      id: SERVICES_ID.PIERCING,
       items: piercing,
       title: 'Прокол ушей',
       imageSrc: '/services-item-img-piercing.jpg',
     },
     {
-      id: 'aquagrim',
+      id: SERVICES_ID.AQUAGRIM,
       items: aquagrim,
       title: 'Аквагрим',
       imageSrc: '/services-item-img-aquagrim.jpg',
     },
     {
-      id: 'manicure',
+      id: SERVICES_ID.MANICURE,
       items: manicure,
       title: 'Маникюр',
       imageSrc: '/services-item-img-manicure.jpg',
@@ -185,7 +186,7 @@ const ServicesPage = () => {
       <div className={styles.servicesGrid}>
         {services.map(({ id, items, title, imageSrc }) => (
           <SimpleCard key={id} justifyContent='space-between'>
-            <div className={styles.servicesItemBlock}>
+            <div className={styles.servicesItemBlock} id={id}>
               <h2 className={styles.servicesItemTitle}>{title}</h2>
               {['aquagrim', 'piercing'].includes(id) ? (
                 <div>

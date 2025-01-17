@@ -21,6 +21,8 @@ import OnlineReg from '@/components/OnlineReg';
 import Footer from '@/components/Footer';
 import Context from '@/store/MenuContext';
 import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
+import Link from 'next/link';
+import { RoutesMap } from '@/utils/routes';
 
 const inter = Inter({ subsets: ['cyrillic'] });
 
@@ -39,13 +41,24 @@ const theme: ThemeConfig = {
 
 const shantellSans = Shantell_Sans({ subsets: ['latin'] });
 
+export enum SERVICES_ID {
+  GIRLS = 'girls',
+  BOYS = 'boys',
+  MENS = 'mens',
+  WOMANS = 'womans',
+  COLORING = 'coloring',
+  PIERCING = 'piercing',
+  AQUAGRIM = 'aquagrim',
+  MANICURE = 'manicure',
+}
+
 const services = [
-  { name: 'Детские стрижки' },
-  { name: 'Взрослые стрижки' },
-  { name: 'Прокол ушей' },
-  { name: 'Аквагрим' },
-  { name: 'Окрашивание' },
-  { name: 'Маникюр' },
+  { name: 'Детские стрижки', id: SERVICES_ID.GIRLS },
+  { name: 'Взрослые стрижки', id: SERVICES_ID.MENS },
+  { name: 'Прокол ушей', id: SERVICES_ID.PIERCING },
+  { name: 'Аквагрим', id: SERVICES_ID.AQUAGRIM },
+  { name: 'Окрашивание', id: SERVICES_ID.COLORING },
+  { name: 'Маникюр', id: SERVICES_ID.MANICURE },
 ];
 
 export default function RootLayout({
@@ -86,16 +99,17 @@ export default function RootLayout({
                     <SimpleCard>
                       <div className={styles.mobContainerServicesContacts}>
                         <div className={styles.servicesList}>
-                          {services.map(({ name }) => (
-                            <span
-                              key={name}
+                          {services.map(({ name, id }) => (
+                            <Link
                               className={styles.servicesListItem}
+                              href={`${RoutesMap.SERVICES}/#${id}`}
+                              key={name}
                             >
                               <CheckCircleOutlined
                                 className={styles.servicesListItemIcon}
                               />
                               <span>{name}</span>
-                            </span>
+                            </Link>
                           ))}
                         </div>
 
