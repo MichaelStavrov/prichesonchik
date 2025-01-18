@@ -23,6 +23,8 @@ import Context from '@/store/MenuContext';
 import BurgerMenu from '@/components/BurgerMenu/BurgerMenu';
 import Link from 'next/link';
 import { RoutesMap } from '@/utils/routes';
+import { Suspense } from 'react';
+import YandexMetrika from '@/components/YandexMetrika';
 
 const inter = Inter({ subsets: ['cyrillic'] });
 
@@ -204,14 +206,10 @@ export default function RootLayout({
               src='https://dikidi.net/assets/js/widget_record/widget2.min.js'
             ></script>
           </Context>
+          <script dangerouslySetInnerHTML={{ __html: `` }} />
           {/* Yandex.Metrika counter  */}
-          <Script
-            id='metrika-counter'
-            strategy='afterInteractive'
-            type='text/javascript'
-            src='../utils/metrika.js'
-          />
-          {/* {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          <Script id='metrika-counter' strategy='afterInteractive'>
+            {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
               m[i].l=1*new Date();
               for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
               k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -223,17 +221,11 @@ export default function RootLayout({
                     trackLinks:true,
                     accurateTrackBounce:true,
                     webvisor:true
-            });`} */}
-
-          <noscript>
-            <div>
-              <Image
-                src='https://mc.yandex.ru/watch/99556595'
-                alt=''
-                style={{ position: 'absolute', left: '-9999px' }}
-              />
-            </div>
-          </noscript>
+            });`}
+          </Script>
+          <Suspense fallback={<></>}>
+            <YandexMetrika />
+          </Suspense>
           {/* Yandex.Metrika counter  */}
         </body>
       </ConfigProvider>
