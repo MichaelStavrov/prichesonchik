@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { CheckOutlined } from '@ant-design/icons';
 import styles from './UsefulPage.module.scss';
 
 const UsefulPage = () => {
