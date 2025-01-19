@@ -385,3 +385,7 @@
 .checkIcon {
   color: green !important;
 }
+
+.yaRatingFrame {
+  align-self: center;
+}

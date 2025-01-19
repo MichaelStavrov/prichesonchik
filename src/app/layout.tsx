@@ -98,7 +98,7 @@ export default function RootLayout({
                     <div className={cn(shantellSans.className, styles.promo)}>
                       От первой стрижки до прически!
                     </div>
-                    <SimpleCard>
+                    <SimpleCard fullHeight>
                       <div className={styles.mobContainerServicesContacts}>
                         <div className={styles.servicesList}>
                           {services.map(({ name, id }) => (
@@ -139,6 +139,12 @@ export default function RootLayout({
                               площадь&nbsp;1, <br /> ТЦ&nbsp;Преображенский
                             </span>
                           </div>
+                          <iframe
+                            src='https://yandex.ru/sprav/widget/rating-badge/66851843542?type=rating'
+                            width='150'
+                            height='50'
+                            frameBorder='0'
+                          ></iframe>
                         </div>
                       </div>
                     </SimpleCard>
@@ -163,7 +169,6 @@ export default function RootLayout({
                     >
                       Для детей и взрослых
                     </div>
-
                     <div className={styles.contactsBlock}>
                       <SimpleCard fullHeight>
                         <div className={styles.contacts}>
@@ -188,6 +193,13 @@ export default function RootLayout({
                               площадь&nbsp;1, <br /> ТЦ&nbsp;Преображенский
                             </span>
                           </div>
+                          <iframe
+                            className={styles.yaRatingFrame}
+                            src='https://yandex.ru/sprav/widget/rating-badge/66851843542?type=rating'
+                            width='150'
+                            height='50'
+                            frameBorder='0'
+                          ></iframe>
                         </div>
                       </SimpleCard>
                     </div>
