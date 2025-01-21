@@ -40,33 +40,6 @@ const UsefulPage = () => {
             Прокол ушей - важное событие для девочки и ее семьи. Ребенок
             получает первое в жизни украшение - это так волнительно и прекрасно.
           </p>
-          {/* <ul className={styles.list}>
-            <li className={styles.listItem}>
-              <CheckOutlined className={styles.checkIcon} />
-              <span>процедура проходит быстро и безболезненно;</span>
-            </li>
-            <li className={styles.listItem}>
-              <CheckOutlined className={styles.checkIcon} />
-              <span>
-                риск образования рубцов или шрамов в этом возрасте практически
-                равен нулю;
-              </span>
-            </li>
-            <li className={styles.listItem}>
-              <CheckOutlined className={styles.checkIcon} />
-              <span>
-                нет риска задеть какие-либо точки на мочке уха, которые могут
-                привести к ухудшению состояния ребенка;
-              </span>
-            </li>
-            <li className={styles.listItem}>
-              <CheckOutlined className={styles.checkIcon} />
-              <span>
-                ранки заживают без болезненных ощущений, и процесс
-                восстановления тканей протекает очень быстро.
-              </span>
-            </li>
-          </ul> */}
           <p>
             Есть повод сделать массу памятных фото и даже устроить небольшой
             праздник. И здесь мы вам поможем, так как прокол ушей в Причесончике

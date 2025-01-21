@@ -24,6 +24,7 @@ const Navigation: FC<NavigationProps> = ({ burgerView }) => {
 
   const routes: NavRoutes[] = [
     { path: RoutesMap.MAIN, label: 'Главная' },
+    { path: RoutesMap.STOCK, label: 'Акции' },
     { path: RoutesMap.SERVICES, label: 'Услуги и цены' },
     { path: RoutesMap.SAMPLES, label: 'Галерея' },
     { path: RoutesMap.REVIEWS, label: 'Отзывы' },
