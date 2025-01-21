@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './StockPage.module.scss';
+import Head from 'next/head';
 import Image from 'next/image';
 import SimpleCard from '@/components/SimpleCard';
+import styles from './StockPage.module.scss';
 
 const StockPage = () => {
   const IMAGE_WIDTH = 200;
@@ -80,6 +81,15 @@ const StockPage = () => {
   ];
   return (
     <div className={styles.stockPage} id='stock-page'>
+      <Head>
+        <title>Акции салона Причесончик</title>
+        <meta
+          name='description'
+          content='акции, скидки, предложения, выгодная стрижка'
+          key='desc'
+        />
+        <link rel='icon' href='/favicon-32x32.png' />
+      </Head>
       <div className={styles.container}>
         <h1 className={styles.title}>Наши акции</h1>
         <div className={styles.stockList}>
