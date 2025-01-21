@@ -7,7 +7,7 @@ import { SERVICES_ID } from '../layout';
 
 const ServicesPage = () => {
   const servicesGirls = [
-    { name: 'Стрижка модельная', price: 'от 600' },
+    { name: 'Стрижка модельная', price: 'от 700' },
     { name: 'Стрижка концов', price: 'от 400' },
     { name: 'Стрижка чёлки', price: 'от 150' },
     { name: 'Плетение кос', price: 'от 250' },
