@@ -148,7 +148,7 @@ const ServicesPage = () => {
       id: SERVICES_ID.COLORING,
       items: coloring,
       title: 'Окрашивание',
-      imageSrc: '/services-item-img-coloring.jpg',
+      imageSrc: '/stock-1.jpg',
     },
     {
       id: SERVICES_ID.PIERCING,
