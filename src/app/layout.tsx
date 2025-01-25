@@ -91,7 +91,7 @@ export default function RootLayout({
             <Header />
             <main className={styles.main}>
               <div className={styles.mainContainer}>
-                <div className={styles.stockPrompt}>
+                {/* <div className={styles.stockPrompt}>
                   <span>Акция!</span>
                   <p className={styles.stockPromptText}>
                     только 25 января всем Татьянам 50% скидка на стрижки и
@@ -103,7 +103,7 @@ export default function RootLayout({
                   >
                     Посмотреть все акции
                   </Link>
-                </div>
+                </div> */}
                 <div className={styles.rowContainer}>
                   <div
                     className={cn(styles.colContainer, styles.colContainer1)}
