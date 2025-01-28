@@ -4,7 +4,7 @@ import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { ConfigProvider, ThemeConfig } from 'antd';
-import { CheckCircleOutlined } from '@ant-design/icons';
+import { CheckCircleOutlined, ArrowRightOutlined } from '@ant-design/icons';
 import './globals.css';
 import Header from '@/components/Header/Header';
 import Image from 'next/image';
@@ -57,9 +57,9 @@ export enum SERVICES_ID {
 const services = [
   { name: 'Детские стрижки', id: SERVICES_ID.GIRLS },
   { name: 'Взрослые стрижки', id: SERVICES_ID.MENS },
+  { name: 'Окрашивание', id: SERVICES_ID.COLORING },
   { name: 'Прокол ушей', id: SERVICES_ID.PIERCING },
   { name: 'Аквагрим', id: SERVICES_ID.AQUAGRIM },
-  { name: 'Окрашивание', id: SERVICES_ID.COLORING },
   { name: 'Маникюр', id: SERVICES_ID.MANICURE },
 ];
 
@@ -126,6 +126,14 @@ export default function RootLayout({
                               <span>{name}</span>
                             </Link>
                           ))}
+
+                          <Link
+                            className={styles.linkToServices}
+                            href={RoutesMap.SERVICES}
+                          >
+                            <span>Все услуги и цены</span>
+                            <ArrowRightOutlined />
+                          </Link>
                         </div>
 
                         <div

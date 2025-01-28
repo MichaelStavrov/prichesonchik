@@ -66,6 +66,16 @@
   }
 }
 
+.linkToServices {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 .rowContainer {
   width: 100%;
   display: grid;
@@ -206,6 +216,7 @@
   align-items: center;
   gap: 24px;
   font-weight: 700;
+  text-decoration: underline;
 
   @media (max-width: 1024px) {
     gap: 16px;
