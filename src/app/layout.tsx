@@ -29,8 +29,9 @@ import YandexMetrika from '@/components/YandexMetrika';
 const inter = Inter({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
-  title: 'Причесончик',
-  description: 'Детский, семейный салон красоты',
+  title: 'Семейная парикмахерская Причесончик Сергиев Посад',
+  description:
+    'детский, семейный, салон красоты, стрижки детей, прокол ушей, мужские стрижки, женские стрижки, окрашивание',
 };
 
 const theme: ThemeConfig = {
@@ -80,7 +81,7 @@ export default function RootLayout({
           content='Детские стрижки, детские прически, взрослые стрижки, окрашивание, маникюр, аквагрим'
           key='desc'
         />
-        <link rel='icon' href='/favicon-32x32.png' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <ConfigProvider theme={theme}>
         <body className={inter.className}>

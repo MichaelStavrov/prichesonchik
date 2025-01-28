@@ -3,6 +3,11 @@ import Image from 'next/image';
 import Head from 'next/head';
 import styles from './SamplesPage.module.scss';
 
+export const metadata = {
+  title: 'Фотографии стрижек парикмахерской Причесончик Сергиев Посад',
+  description: 'примеры работ, фото, галерея',
+};
+
 const SamplesPage = () => {
   const SAMPLES_ITEM_IMG_WIDTH = 300;
 

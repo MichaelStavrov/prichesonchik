@@ -4,6 +4,11 @@ import Image from 'next/image';
 import SimpleCard from '@/components/SimpleCard';
 import styles from './StockPage.module.scss';
 
+export const metadata = {
+  title: 'Акции парикмахерской Причесончик Сергиев Посад',
+  description: 'актуальные предложения, акции на стрижки, акции на окрашивание',
+};
+
 const StockPage = () => {
   const IMAGE_WIDTH = 200;
   const IMAGE_HEIGHT = IMAGE_WIDTH / 0.7;

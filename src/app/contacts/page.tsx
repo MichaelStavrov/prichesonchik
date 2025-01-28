@@ -2,6 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import styles from './ContactsPage.module.scss';
 
+export const metadata = {
+  title: 'Контакты парикмахерской Причесончик Сергиев Посад',
+  description: 'Телефон, адрес, вконтакте, вк',
+};
+
 const ContactsPage = () => {
   return (
     <div className={styles.contactsPage}>

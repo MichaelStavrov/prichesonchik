@@ -5,6 +5,11 @@ import styles from './ServicesPage.module.scss';
 import SimpleCard from '@/components/SimpleCard';
 import { SERVICES_ID } from '../layout';
 
+export const metadata = {
+  title: 'Цены на услуги парикмахерской Причесончик Сергиев Посад',
+  description: 'стоимость стрижек, услуги салона, стрижки недорого',
+};
+
 const ServicesPage = () => {
   const servicesGirls = [
     { name: 'Стрижка модельная', price: 'от 700' },

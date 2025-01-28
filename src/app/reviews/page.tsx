@@ -3,6 +3,11 @@ import Head from 'next/head';
 import { StarFilled } from '@ant-design/icons';
 import styles from './ReviewsPage.module.scss';
 
+export const metadata = {
+  title: 'Отзывы о парикмахерской Причесончик Сергиев Посад',
+  description: 'реальные отзывы',
+};
+
 const ReviewsPage = () => {
   const reviewsItems = [
     {

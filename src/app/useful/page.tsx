@@ -2,6 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import styles from './UsefulPage.module.scss';
 
+export const metadata = {
+  title: 'Рекомендации парикмахерской Причесончик Сергиев Посад',
+  description: 'полезная информация',
+};
+
 const UsefulPage = () => {
   const usefulItems = [
     {
