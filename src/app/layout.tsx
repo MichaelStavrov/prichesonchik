@@ -60,8 +60,8 @@ const services = [
   { name: 'Взрослые стрижки', id: SERVICES_ID.MENS },
   { name: 'Окрашивание', id: SERVICES_ID.COLORING },
   { name: 'Прокол ушей', id: SERVICES_ID.PIERCING },
-  { name: 'Аквагрим', id: SERVICES_ID.AQUAGRIM },
-  { name: 'Маникюр', id: SERVICES_ID.MANICURE },
+  // { name: 'Аквагрим', id: SERVICES_ID.AQUAGRIM },
+  // { name: 'Маникюр', id: SERVICES_ID.MANICURE },
 ];
 
 export default function RootLayout({

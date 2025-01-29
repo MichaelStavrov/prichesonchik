@@ -51,28 +51,6 @@ const ServicesPage = () => {
     { name: 'Мытье головы', price: 'от 200' },
   ];
 
-  const aquagrim = [
-    {
-      name: (
-        <span className={styles.serviceBlockArticle}>
-          <span>
-            Отличный способ разнообразить праздник и поднять настроение!
-          </span>
-          <span>
-            Рисунки, узоры, маски героев – подарят удивительную возможность
-            каждому ребенку перевоплотиться и получить удовольствие от
-            праздника.
-          </span>
-          <span>
-            С красочным гримом радость будет бесконечной, а приключения –
-            невероятными!
-          </span>
-        </span>
-      ),
-      price: 'от 300',
-    },
-  ];
-
   const coloring = [
     { name: 'Окрашивание в один тон', price: 'от 1400' },
     { name: 'Окрашивание со своей краской', price: 'от 1000' },
@@ -88,17 +66,39 @@ const ServicesPage = () => {
     },
   ];
 
-  const manicure = [
-    { name: 'Маникюр с покрытием гель-лаком, укрепление', price: 'от 1 900' },
-    { name: 'Покрытие гель-лаком (без укрепления)', price: 'от 1 500' },
-    { name: 'Аппаратный маникюр', price: 'от 700' },
-    { name: 'Наращивание ногтей', price: 'от 2 300' },
-    { name: 'Комбинированный маникюр', price: 'от 700' },
-    { name: 'Дизайн ногтей', price: 'от 200' },
-    { name: 'Рисунок на ногте', price: 'от 300' },
-    { name: 'Необычная форма ногтей', price: 'от 2 700' },
-    { name: 'Снятие чужой работы', price: 'от 300' },
-  ];
+  // const aquagrim = [
+  //   {
+  //     name: (
+  //       <span className={styles.serviceBlockArticle}>
+  //         <span>
+  //           Отличный способ разнообразить праздник и поднять настроение!
+  //         </span>
+  //         <span>
+  //           Рисунки, узоры, маски героев – подарят удивительную возможность
+  //           каждому ребенку перевоплотиться и получить удовольствие от
+  //           праздника.
+  //         </span>
+  //         <span>
+  //           С красочным гримом радость будет бесконечной, а приключения –
+  //           невероятными!
+  //         </span>
+  //       </span>
+  //     ),
+  //     price: 'от 300',
+  //   },
+  // ];
+
+  // const manicure = [
+  //   { name: 'Маникюр с покрытием гель-лаком, укрепление', price: 'от 1 900' },
+  //   { name: 'Покрытие гель-лаком (без укрепления)', price: 'от 1 500' },
+  //   { name: 'Аппаратный маникюр', price: 'от 700' },
+  //   { name: 'Наращивание ногтей', price: 'от 2 300' },
+  //   { name: 'Комбинированный маникюр', price: 'от 700' },
+  //   { name: 'Дизайн ногтей', price: 'от 200' },
+  //   { name: 'Рисунок на ногте', price: 'от 300' },
+  //   { name: 'Необычная форма ногтей', price: 'от 2 700' },
+  //   { name: 'Снятие чужой работы', price: 'от 300' },
+  // ];
 
   const piercing = [
     {
@@ -161,18 +161,18 @@ const ServicesPage = () => {
       title: 'Прокол ушей',
       imageSrc: '/services-item-img-piercing.jpg',
     },
-    {
-      id: SERVICES_ID.AQUAGRIM,
-      items: aquagrim,
-      title: 'Аквагрим',
-      imageSrc: '/services-item-img-aquagrim.jpg',
-    },
-    {
-      id: SERVICES_ID.MANICURE,
-      items: manicure,
-      title: 'Маникюр',
-      imageSrc: '/services-item-img-manicure.jpg',
-    },
+    // {
+    //   id: SERVICES_ID.AQUAGRIM,
+    //   items: aquagrim,
+    //   title: 'Аквагрим',
+    //   imageSrc: '/services-item-img-aquagrim.jpg',
+    // },
+    // {
+    //   id: SERVICES_ID.MANICURE,
+    //   items: manicure,
+    //   title: 'Маникюр',
+    //   imageSrc: '/services-item-img-manicure.jpg',
+    // },
   ];
 
   const SERVICES_ITEM_IMG_WIDTH = 200;
