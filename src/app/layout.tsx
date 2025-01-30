@@ -93,9 +93,9 @@ export default function RootLayout({
             <main className={styles.main}>
               <div className={styles.mainContainer}>
                 <div className={styles.stockPrompt}>
-                  <span>Акция!</span>
+                  <span>Акция до 20 февраля!</span>
                   <p className={styles.stockPromptText}>
-                    До 20 февраля выдаем всем карточки на{' '}
+                    Выдаем каждому клиенту карточки на{' '}
                     <strong>бесплатные</strong> стрижки.
                     <br />
                     Не упустите шанс их получить!
