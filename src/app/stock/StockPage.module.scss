@@ -33,7 +33,7 @@
   display: flex;
   gap: 60px;
 
-  @media (max-width: 530px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     gap: 20px;
   }
@@ -41,6 +41,7 @@
 
 .stockImage {
   border-radius: 6px;
+  align-self: center;
 }
 
 .stockContent {
@@ -54,7 +55,7 @@
   font-size: 24px;
   font-weight: 700;
 
-  @media (max-width: 530px) {
+  @media (max-width: 800px) {
     display: none;
   }
 }
@@ -63,8 +64,9 @@
   display: none;
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
 
-  @media (max-width: 530px) {
+  @media (max-width: 800px) {
     display: block;
   }
 }

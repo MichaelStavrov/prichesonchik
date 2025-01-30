@@ -13,7 +13,34 @@ const StockPage = () => {
   const IMAGE_WIDTH = 200;
   const IMAGE_HEIGHT = IMAGE_WIDTH / 0.7;
 
+  const imageSixFreeWidth = 256;
+  const imageSixFreeHeight = imageSixFreeWidth / 1.8;
+
   const stockItems = [
+    {
+      name: 'Карточка на бесплатную стрижку',
+      img: '/six-free.jpg',
+      imgSize: { width: imageSixFreeWidth, height: imageSixFreeHeight },
+      desc: (
+        <div className={styles.stockItemDesc}>
+          <p>
+            Семейная студия красоты Причесончик рада вам сообщить, что теперь у
+            нас действуют карточки постоянных клиентов, по которым каждая 6-я
+            стрижка бесплатно!
+          </p>
+          <p>
+            Одной карточкой может пользоваться вся семья, а это значит, что для
+            традиционной семьи из 3-х, 4-х человек, бесплатные стрижки будут
+            частым и приятным бонусом!
+          </p>
+          <p>
+            Успейте получить карточку до 20 февраля Возможно, мы продлим данную
+            акцию, но лучше поторопиться сейчас, чтобы гарантировано получить
+            эту выгодную карточку!
+          </p>
+        </div>
+      ),
+    },
     {
       name: 'Выгодное окрашивание за 600 рублей',
       img: '/stock-3.jpg',
@@ -81,16 +108,19 @@ const StockPage = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>Наши акции</h1>
         <div className={styles.stockList}>
-          {stockItems.map(({ name, img, desc }) => (
+          {stockItems.map(({ name, img, desc, imgSize }) => (
             <SimpleCard key={name}>
               <div className={styles.stockItem}>
                 <span className={styles.stockTitleMob}>{name}</span>
                 <Image
                   className={styles.stockImage}
+                  style={{
+                    border: imgSize ? '1px solid var(--primary)' : 'none',
+                  }}
                   src={img}
                   alt=''
-                  width={IMAGE_WIDTH}
-                  height={IMAGE_HEIGHT}
+                  width={imgSize?.width ?? IMAGE_WIDTH}
+                  height={imgSize?.height ?? IMAGE_HEIGHT}
                 />
                 <div className={styles.stockContent}>
                   <span className={styles.stockTitle}>{name}</span>
