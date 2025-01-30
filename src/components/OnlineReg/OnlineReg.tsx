@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+'use client';
+
+import React, { FC, useEffect, useState } from 'react';
 import styles from './OnlineReg.module.scss';
 
 interface OnlineRegProps {
@@ -6,26 +8,41 @@ interface OnlineRegProps {
 }
 
 const OnlineReg: FC<OnlineRegProps> = ({ variant = 'default' }) => {
+  const [onLoadOpenLink, setOnLoadOpenLink] = useState(false);
+  console.log('onLoadOpenLink', onLoadOpenLink);
+  useEffect(() => {
+    if (onLoadOpenLink) {
+      setTimeout(() => {
+        setOnLoadOpenLink(false);
+      }, 3000);
+    }
+  }, [onLoadOpenLink]);
+
   if (variant === 'animated') {
     return (
       <div className={styles.wrap}>
         <a
           className={styles.animatedBtn}
           href='https://dikidi.net/#widget=177386'
+          onClick={() => setOnLoadOpenLink(true)}
         >
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          Запись онлайн
+          {onLoadOpenLink ? 'Открываем...' : 'Запись онлайн'}
         </a>
       </div>
     );
   }
 
   return (
-    <a className={styles.link} href='https://dikidi.net/#widget=177386'>
-      Запись онлайн
+    <a
+      className={styles.link}
+      href='https://dikidi.net/#widget=177386'
+      onClick={() => setOnLoadOpenLink(true)}
+    >
+      {onLoadOpenLink ? 'Открываем...' : 'Запись онлайн'}
     </a>
   );
 };
