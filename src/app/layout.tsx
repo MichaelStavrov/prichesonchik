@@ -132,7 +132,7 @@ export default function RootLayout({
 
                           <Link
                             className={styles.linkToServices}
-                            href={RoutesMap.SERVICES}
+                            href={`${RoutesMap.SERVICES}/#${SERVICES_ID.GIRLS}`}
                           >
                             <span>Все услуги и цены</span>
                             <ArrowRightOutlined />
