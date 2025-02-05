@@ -51,6 +51,28 @@ const ContactsPage = () => {
               https://vk.cc/cHnA4n
             </a>
           </div>
+          <div className={styles.contactsRow}>
+            <span className={styles.contactsName}>ТГ:</span>
+            <a
+              href='https://t.me/prichesoncchik'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.tel}
+            >
+              https://t.me/prichesoncchik
+            </a>
+          </div>
+          <div className={styles.contactsRow}>
+            <span className={styles.contactsName}>Одноклассники:</span>
+            <a
+              href='https://ok.me/M1nK1'
+              target='_blank'
+              rel='noopener noreferrer'
+              className={styles.tel}
+            >
+              https://ok.me/M1nK1
+            </a>
+          </div>
         </div>
         <div className={styles.map}>
           <div className={styles.mapContainer}>
