@@ -9,7 +9,7 @@ interface OnlineRegProps {
 
 const OnlineReg: FC<OnlineRegProps> = ({ variant = 'default' }) => {
   const [onLoadOpenLink, setOnLoadOpenLink] = useState(false);
-  console.log('onLoadOpenLink', onLoadOpenLink);
+
   useEffect(() => {
     if (onLoadOpenLink) {
       setTimeout(() => {

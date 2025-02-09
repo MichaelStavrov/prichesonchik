@@ -12,6 +12,19 @@ const SamplesPage = () => {
   const SAMPLES_ITEM_IMG_WIDTH = 300;
 
   const samples = [
+    { name: 'пример стрижки', imgSrc: '/sample-23.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-24.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-25.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-26.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-27.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-28.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-29.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-30.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-31.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-32.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-33.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-34.jpg' },
+    { name: 'пример стрижки', imgSrc: '/sample-35.jpg' },
     { name: 'пример стрижки', imgSrc: '/services-item-img-girl.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-2.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-4.jpg' },
@@ -32,7 +45,6 @@ const SamplesPage = () => {
     { name: 'пример стрижки', imgSrc: '/sample-20.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-21.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-22.jpg' },
-    { name: 'пример стрижки', imgSrc: '/sample-3.jpg' },
   ];
 
   return (
