@@ -179,7 +179,7 @@ const ServicesPage = () => {
   const SERVICES_ITEM_IMG_WIDTH = 200;
 
   return (
-    <div className={styles.servicesPage}>
+    <div className={styles.servicesPage} id='service-page'>
       <Head>
         <title>Цены и услуги парикмахерской Причесончик</title>
         <meta

@@ -100,7 +100,7 @@ const ReviewsPage = () => {
   const stars = [1, 2, 3, 4, 5];
 
   return (
-    <div className={styles.reviewsPage}>
+    <div className={styles.reviewsPage} id='reviews-page'>
       <Head>
         <title>Отзывы о Причесончике</title>
         <meta

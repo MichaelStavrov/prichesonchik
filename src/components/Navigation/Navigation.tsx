@@ -20,16 +20,21 @@ const Navigation: FC<NavigationProps> = ({ burgerView }) => {
   interface NavRoutes {
     path: string;
     label: string;
+    anchor?: string;
   }
 
   const routes: NavRoutes[] = [
-    { path: RoutesMap.MAIN, label: 'Главная' },
-    { path: RoutesMap.STOCK, label: 'Акции' },
-    { path: RoutesMap.SERVICES, label: 'Услуги и цены' },
-    { path: RoutesMap.SAMPLES, label: 'Галерея' },
-    { path: RoutesMap.REVIEWS, label: 'Отзывы' },
-    { path: RoutesMap.USEFUL, label: 'Полезное' },
-    { path: RoutesMap.CONTACTS, label: 'Контакты' },
+    { path: RoutesMap.MAIN, label: 'Главная', anchor: 'stock-prompt' },
+    { path: RoutesMap.STOCK, label: 'Акции', anchor: 'stock-page' },
+    {
+      path: RoutesMap.SERVICES,
+      label: 'Услуги и цены',
+      anchor: 'service-page',
+    },
+    { path: RoutesMap.SAMPLES, label: 'Галерея', anchor: 'samples-page' },
+    { path: RoutesMap.REVIEWS, label: 'Отзывы', anchor: 'reviews-page' },
+    { path: RoutesMap.USEFUL, label: 'Полезное', anchor: 'useful-page' },
+    { path: RoutesMap.CONTACTS, label: 'Контакты', anchor: 'contacts-page' },
   ];
 
   const handleRouteClick = (path: string) => {
@@ -56,14 +61,14 @@ const Navigation: FC<NavigationProps> = ({ burgerView }) => {
 
   return (
     <nav className={styles.navigation}>
-      {routes.map(({ path, label }) => (
+      {routes.map(({ path, label, anchor }) => (
         <Button
           key={path}
           type='link'
           className={cn(styles.navBtn, {
             [styles.activeNavBtn]: pathname === path,
           })}
-          onClick={() => router.push(path)}
+          onClick={() => router.push(`${path}/#${anchor}`)}
         >
           {label}
         </Button>

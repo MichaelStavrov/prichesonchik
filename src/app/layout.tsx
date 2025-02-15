@@ -92,7 +92,7 @@ export default function RootLayout({
             <Header />
             <main className={styles.main}>
               <div className={styles.mainContainer}>
-                <div className={styles.stockPrompt}>
+                <div className={styles.stockPrompt} id='stock-prompt'>
                   <span>Акция до 20 февраля!</span>
                   <p className={styles.stockPromptText}>
                     Выдаем каждому клиенту карточки на{' '}

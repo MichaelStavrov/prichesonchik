@@ -9,7 +9,7 @@ export const metadata = {
 
 const ContactsPage = () => {
   return (
-    <div className={styles.contactsPage}>
+    <div className={styles.contactsPage} id='contacts-page'>
       <Head>
         <title>Контакты парикмахерской, салона красоты Причесончик</title>
         <meta

@@ -86,7 +86,7 @@ const UsefulPage = () => {
   ];
 
   return (
-    <div className={styles.usefulPage}>
+    <div className={styles.usefulPage} id='useful-page'>
       <Head>
         <title>Полезная информация парикмахерской Причесончик</title>
         <meta

@@ -48,7 +48,7 @@ const SamplesPage = () => {
   ];
 
   return (
-    <div className={styles.samplesPage}>
+    <div className={styles.samplesPage} id='samples-page'>
       <Head>
         <title>Примеры работ парикмахерской Причесончика</title>
         <meta name='description' content='Фотогалерея' key='desc' />
