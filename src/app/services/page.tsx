@@ -125,6 +125,20 @@ const ServicesPage = () => {
     },
   ];
 
+  const brows = [
+    { name: 'Ламинирование бровей - полный комплекс', price: '2 100' },
+    { name: 'Ламинирование бровей без окрашивания/коррекции', price: '1800' },
+    {
+      name: 'Ламинирование бровей без окрашивания и без коррекции',
+      price: '1 500',
+    },
+    { name: 'Окрашивание и коррекция', price: '1 300' },
+    { name: 'Окрашивание бровей', price: '800' },
+    { name: 'Коррекция бровей', price: '800' },
+    { name: 'Уход (ботокс)', price: '500' },
+    { name: 'Депиляция 1 зоны', price: '300' },
+  ];
+
   const services = [
     {
       id: SERVICES_ID.GIRLS,
@@ -161,6 +175,12 @@ const ServicesPage = () => {
       items: piercing,
       title: 'Прокол ушей',
       imageSrc: '/services-item-img-piercing.jpg',
+    },
+    {
+      id: SERVICES_ID.BROWS,
+      items: brows,
+      title: 'Брови',
+      imageSrc: '/services-item-img-brows.jpg',
     },
     // {
     //   id: SERVICES_ID.AQUAGRIM,

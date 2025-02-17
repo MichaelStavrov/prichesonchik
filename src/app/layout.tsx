@@ -53,6 +53,7 @@ export enum SERVICES_ID {
   PIERCING = 'piercing',
   AQUAGRIM = 'aquagrim',
   MANICURE = 'manicure',
+  BROWS = 'brows',
 }
 
 const services = [
@@ -60,6 +61,7 @@ const services = [
   { name: 'Взрослые стрижки', id: SERVICES_ID.MENS },
   { name: 'Окрашивание', id: SERVICES_ID.COLORING },
   { name: 'Прокол ушей', id: SERVICES_ID.PIERCING },
+  { name: 'Брови', id: SERVICES_ID.BROWS },
   // { name: 'Аквагрим', id: SERVICES_ID.AQUAGRIM },
   // { name: 'Маникюр', id: SERVICES_ID.MANICURE },
 ];
