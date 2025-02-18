@@ -95,18 +95,16 @@ export default function RootLayout({
             <main className={styles.main}>
               <div className={styles.mainContainer}>
                 <div className={styles.stockPrompt} id='stock-prompt'>
-                  <span>Акция до 20 февраля!</span>
+                  <span>Скидки на брови!</span>
                   <p className={styles.stockPromptText}>
-                    Выдаем каждому клиенту карточки на{' '}
-                    <strong>бесплатные</strong> стрижки.
-                    <br />
-                    Не упустите шанс их получить!
+                    22 февраля и 1 марта знакомство с нашим новым
+                    мастером-бровистом Анастасией - скидка 30% на все услуги!
                   </p>
                   <Link
                     className={styles.linkToStock}
-                    href={`${RoutesMap.STOCK}#stock-page`}
+                    href={`${RoutesMap.SERVICES}#${SERVICES_ID.BROWS}`}
                   >
-                    Посмотреть все акции
+                    Посмотреть услуги на брови
                   </Link>
                 </div>
                 <div className={styles.rowContainer}>

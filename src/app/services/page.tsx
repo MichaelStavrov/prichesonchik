@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import styles from './ServicesPage.module.scss';
@@ -10,8 +10,21 @@ export const metadata = {
   description: 'стоимость стрижек, услуги салона, стрижки недорого',
 };
 
+interface ServicesItems {
+  name: ReactNode;
+  price: string;
+}
+
+interface Services {
+  id: SERVICES_ID;
+  items: ServicesItems[];
+  title: string;
+  imageSrc: string;
+  description?: ReactNode;
+}
+
 const ServicesPage = () => {
-  const servicesGirls = [
+  const servicesGirls: ServicesItems[] = [
     { name: 'Стрижка модельная', price: '700' },
     { name: 'Стрижка концов', price: '400' },
     { name: 'Стрижка чёлки', price: '150' },
@@ -20,7 +33,7 @@ const ServicesPage = () => {
     { name: 'Окрашивание мелками', price: 'от 150' },
   ];
 
-  const servicesBoys = [
+  const servicesBoys: ServicesItems[] = [
     { name: 'Стрижка модельная', price: '700' },
     { name: 'Стрижка ножницами', price: '800' },
     { name: 'Стрижка машинкой', price: '450' },
@@ -30,7 +43,7 @@ const ServicesPage = () => {
     { name: 'Художественный выстриг', price: '200' },
   ];
 
-  const servicesMens = [
+  const servicesMens: ServicesItems[] = [
     { name: 'Стрижка модельная', price: '700' },
     { name: 'Стрижка ножницами', price: '650' },
     { name: 'Стрижка машинкой', price: '450' },
@@ -40,7 +53,7 @@ const ServicesPage = () => {
     { name: 'Художественный выстриг', price: '200' },
   ];
 
-  const servicesWomans = [
+  const servicesWomans: ServicesItems[] = [
     { name: 'Стрижка модельная', price: '700' },
     { name: 'Стрижка концов', price: '500' },
     { name: 'Стрижка чёлки', price: '200' },
@@ -51,7 +64,7 @@ const ServicesPage = () => {
     { name: 'Мытье головы', price: '200' },
   ];
 
-  const coloring = [
+  const coloring: ServicesItems[] = [
     { name: 'Окрашивание в один тон', price: 'от 1400' },
     { name: 'Окрашивание со своей краской', price: 'от 1000' },
     { name: 'Окрашивание корней', price: 'от 1 400' },
@@ -64,6 +77,45 @@ const ServicesPage = () => {
       name: 'Сложное окрашивание (AirTouch, Омбре, Шатуш, Балаяж)',
       price: 'от 5 000',
     },
+  ];
+
+  const piercing: ServicesItems[] = [
+    {
+      name: (
+        <span className={styles.serviceBlockArticle}>
+          <span>Прокол ушей детям и взрослым.</span>
+          <span>
+            Прокол осуществляется сертифицированной системой Studex R993.
+            Инструмент гарантирует полную стерильность и качественный быстрый
+            прокол.
+          </span>
+          <span>
+            Оригинальный механизм позволяет раздвинуть ткани, обеспечивая
+            минимальный дискомфорт и быстрое заживление.
+          </span>
+          <span>
+            В стоимость прокола входят оригинальные серьги из гипоаллергенной
+            нержавеющей стали. В подарок грамота за смелость!
+          </span>
+          <b>По предварительной записи!</b>
+        </span>
+      ),
+      price: '2100',
+    },
+  ];
+
+  const brows: ServicesItems[] = [
+    { name: 'Ламинирование бровей - полный комплекс', price: '2 100' },
+    { name: 'Ламинирование бровей без окрашивания/коррекции', price: '1800' },
+    {
+      name: 'Ламинирование бровей без окрашивания и без коррекции',
+      price: '1 500',
+    },
+    { name: 'Окрашивание и коррекция', price: '1 300' },
+    { name: 'Окрашивание бровей', price: '800' },
+    { name: 'Коррекция бровей', price: '800' },
+    { name: 'Уход (ботокс)', price: '500' },
+    { name: 'Депиляция 1 зоны', price: '300' },
   ];
 
   // const aquagrim = [
@@ -100,46 +152,7 @@ const ServicesPage = () => {
   //   { name: 'Снятие чужой работы', price: 'от 300' },
   // ];
 
-  const piercing = [
-    {
-      name: (
-        <span className={styles.serviceBlockArticle}>
-          <span>Прокол ушей детям и взрослым.</span>
-          <span>
-            Прокол осуществляется сертифицированной системой Studex R993.
-            Инструмент гарантирует полную стерильность и качественный быстрый
-            прокол.
-          </span>
-          <span>
-            Оригинальный механизм позволяет раздвинуть ткани, обеспечивая
-            минимальный дискомфорт и быстрое заживление.
-          </span>
-          <span>
-            В стоимость прокола входят оригинальные серьги из гипоаллергенной
-            нержавеющей стали. В подарок грамота за смелость!
-          </span>
-          <b>По предварительной записи!</b>
-        </span>
-      ),
-      price: '2100',
-    },
-  ];
-
-  const brows = [
-    { name: 'Ламинирование бровей - полный комплекс', price: '2 100' },
-    { name: 'Ламинирование бровей без окрашивания/коррекции', price: '1800' },
-    {
-      name: 'Ламинирование бровей без окрашивания и без коррекции',
-      price: '1 500',
-    },
-    { name: 'Окрашивание и коррекция', price: '1 300' },
-    { name: 'Окрашивание бровей', price: '800' },
-    { name: 'Коррекция бровей', price: '800' },
-    { name: 'Уход (ботокс)', price: '500' },
-    { name: 'Депиляция 1 зоны', price: '300' },
-  ];
-
-  const services = [
+  const services: Services[] = [
     {
       id: SERVICES_ID.GIRLS,
       items: servicesGirls,
@@ -181,6 +194,15 @@ const ServicesPage = () => {
       items: brows,
       title: 'Брови',
       imageSrc: '/services-item-img-brows.jpg',
+      description: (
+        <div className={styles.servicesDescription}>
+          <p>Пока стригут малыша, маме делают брови - это очень удобно!</p>
+          <p>
+            После стрижки ребенок играет с игрушками или смотрит мультики, мы
+            найдем чем занять малыша, пока мама на процедуре.
+          </p>
+        </div>
+      ),
     },
     // {
     //   id: SERVICES_ID.AQUAGRIM,
@@ -210,16 +232,16 @@ const ServicesPage = () => {
       </Head>
       <h1 className={styles.title}>Наши услуги и цены</h1>
       <div className={styles.servicesGrid}>
-        {services.map(({ id, items, title, imageSrc }) => (
+        {services.map(({ id, items, title, imageSrc, description }) => (
           <SimpleCard key={id} justifyContent='space-between'>
             <div className={styles.servicesItemBlock} id={id}>
               <h2 className={styles.servicesItemTitle}>{title}</h2>
-              {['aquagrim', 'piercing'].includes(id) ? (
+              {[SERVICES_ID.AQUAGRIM, SERVICES_ID.PIERCING].includes(id) ? (
                 <div>
                   {items.map(({ name, price }) => (
                     <div
                       className={styles.servicesItemContent}
-                      key={name.toString()}
+                      key={name?.toLocaleString()}
                     >
                       <div
                         className={styles.servicesItemContentColoringLeftBlock}
@@ -242,7 +264,7 @@ const ServicesPage = () => {
                   <div className={styles.servicesItemContentContainer}>
                     {items.map(({ name, price }) => (
                       <div
-                        key={name.toString()}
+                        key={name?.toLocaleString()}
                         className={styles.servicesItemRow}
                       >
                         <span>{name}</span>
@@ -261,6 +283,7 @@ const ServicesPage = () => {
                   />
                 </div>
               )}
+              {description}
             </div>
           </SimpleCard>
         ))}
