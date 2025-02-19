@@ -35,7 +35,6 @@ const ServicesPage = () => {
 
   const servicesBoys: ServicesItems[] = [
     { name: 'Стрижка модельная', price: '700' },
-    { name: 'Стрижка ножницами', price: '800' },
     { name: 'Стрижка машинкой', price: '450' },
     { name: 'Стрижка наголо', price: '300' },
     { name: 'Окантовка', price: '200' },
