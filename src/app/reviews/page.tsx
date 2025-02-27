@@ -111,6 +111,25 @@ const ReviewsPage = () => {
       </Head>
       <div className={styles.container}>
         <h1 className={styles.title}>Отзывы наших клиентов</h1>
+        <div className={styles.row}>
+          <a
+            className={styles.outerLink}
+            href='https://yandex.ru/maps/org/prichesonchik/66851843542/reviews/?indoorLevel=1&ll=38.135756%2C56.302758&tab=reviews&z=16.63'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Посмотреть отзывы на Яндекс картах
+          </a>
+          <a
+            className={styles.outerLink}
+            href='https://vk.com/reviews-227950157'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Посмотреть отзывы ВКонтакте
+          </a>
+        </div>
+
         <ul className={styles.reviewsList}>
           {reviewsItems.map(({ name, review }) => (
             <li className={styles.reviewsListItem} key={review}>
