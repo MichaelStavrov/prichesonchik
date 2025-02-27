@@ -103,19 +103,19 @@ const ServicesPage = () => {
     },
   ];
 
-  const brows: ServicesItems[] = [
-    { name: 'Ламинирование бровей - полный комплекс', price: '2 100' },
-    { name: 'Ламинирование бровей без окрашивания/коррекции', price: '1800' },
-    {
-      name: 'Ламинирование бровей без окрашивания и без коррекции',
-      price: '1 500',
-    },
-    { name: 'Окрашивание и коррекция', price: '1 300' },
-    { name: 'Окрашивание бровей', price: '800' },
-    { name: 'Коррекция бровей', price: '800' },
-    { name: 'Уход (ботокс)', price: '500' },
-    { name: 'Депиляция 1 зоны', price: '300' },
-  ];
+  // const brows: ServicesItems[] = [
+  //   { name: 'Ламинирование бровей - полный комплекс', price: '2 100' },
+  //   { name: 'Ламинирование бровей без окрашивания/коррекции', price: '1800' },
+  //   {
+  //     name: 'Ламинирование бровей без окрашивания и без коррекции',
+  //     price: '1 500',
+  //   },
+  //   { name: 'Окрашивание и коррекция', price: '1 300' },
+  //   { name: 'Окрашивание бровей', price: '800' },
+  //   { name: 'Коррекция бровей', price: '800' },
+  //   { name: 'Уход (ботокс)', price: '500' },
+  //   { name: 'Депиляция 1 зоны', price: '300' },
+  // ];
 
   // const aquagrim = [
   //   {
@@ -188,21 +188,21 @@ const ServicesPage = () => {
       title: 'Прокол ушей',
       imageSrc: '/services-item-img-piercing.jpg',
     },
-    {
-      id: SERVICES_ID.BROWS,
-      items: brows,
-      title: 'Брови',
-      imageSrc: '/services-item-img-brows.jpg',
-      description: (
-        <div className={styles.servicesDescription}>
-          <p>Пока стригут малыша, маме делают брови - это очень удобно!</p>
-          <p>
-            После стрижки ребенок играет с игрушками или смотрит мультики, мы
-            найдем чем занять малыша, пока мама на процедуре.
-          </p>
-        </div>
-      ),
-    },
+    // {
+    //   id: SERVICES_ID.BROWS,
+    //   items: brows,
+    //   title: 'Брови',
+    //   imageSrc: '/services-item-img-brows.jpg',
+    //   description: (
+    //     <div className={styles.servicesDescription}>
+    //       <p>Пока стригут малыша, маме делают брови - это очень удобно!</p>
+    //       <p>
+    //         После стрижки ребенок играет с игрушками или смотрит мультики, мы
+    //         найдем чем занять малыша, пока мама на процедуре.
+    //       </p>
+    //     </div>
+    //   ),
+    // },
     // {
     //   id: SERVICES_ID.AQUAGRIM,
     //   items: aquagrim,

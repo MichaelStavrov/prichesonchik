@@ -94,7 +94,7 @@ export default function RootLayout({
             <Header />
             <main className={styles.main}>
               <div className={styles.mainContainer}>
-                <div className={styles.stockPrompt} id='stock-prompt'>
+                {/* <div className={styles.stockPrompt} id='stock-prompt'>
                   <span>Скидки на брови!</span>
                   <p className={styles.stockPromptText}>
                     22 февраля и 1 марта знакомство с нашим новым
@@ -106,7 +106,7 @@ export default function RootLayout({
                   >
                     Посмотреть услуги на брови
                   </Link>
-                </div>
+                </div> */}
                 <div className={styles.rowContainer}>
                   <div
                     className={cn(styles.colContainer, styles.colContainer1)}

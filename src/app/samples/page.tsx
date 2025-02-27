@@ -59,10 +59,6 @@ const SamplesPage = () => {
           {samples.map(({ name, imgSrc }) => (
             <Image
               className={styles.servicesItemImage}
-              // style={{
-              //   width: '100%',
-              //   height: 'auto',
-              // }}
               key={imgSrc}
               src={imgSrc}
               alt={name}
