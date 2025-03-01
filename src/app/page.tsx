@@ -4,6 +4,8 @@ import MainCarousel from '@/components/MainCarousel';
 import styles from './page.module.css';
 import SimpleCard from '@/components/SimpleCard';
 
+// remove this comment
+
 export default function Home() {
   const advantages = [
     {
