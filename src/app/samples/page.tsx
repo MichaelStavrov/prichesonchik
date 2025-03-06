@@ -12,6 +12,9 @@ const SamplesPage = () => {
   const SAMPLES_ITEM_IMG_WIDTH = 300;
 
   const samples = [
+    { name: 'пример стрижки', imgSrc: '/carousel-main-img-13.jpg' },
+    { name: 'пример стрижки', imgSrc: '/best-photo.jpg' },
+    { name: 'пример стрижки', imgSrc: '/carousel-main-img-15.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-23.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-24.jpg' },
     { name: 'пример стрижки', imgSrc: '/sample-25.jpg' },
