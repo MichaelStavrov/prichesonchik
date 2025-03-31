@@ -94,19 +94,6 @@ export default function RootLayout({
             <Header />
             <main className={styles.main}>
               <div className={styles.mainContainer}>
-                {/* <div className={styles.stockPrompt} id='stock-prompt'>
-                  <span>Скидки на брови!</span>
-                  <p className={styles.stockPromptText}>
-                    22 февраля и 1 марта знакомство с нашим новым
-                    мастером-бровистом Анастасией - скидка 30% на все услуги!
-                  </p>
-                  <Link
-                    className={styles.linkToStock}
-                    href={`${RoutesMap.SERVICES}#${SERVICES_ID.BROWS}`}
-                  >
-                    Посмотреть услуги на брови
-                  </Link>
-                </div> */}
                 <div className={styles.rowContainer}>
                   <div
                     className={cn(styles.colContainer, styles.colContainer1)}
@@ -228,6 +215,26 @@ export default function RootLayout({
                       </SimpleCard>
                     </div>
                   </div>
+                </div>
+                <div
+                  className={styles.stockPrompt}
+                  id='stock-prompt'
+                  style={{
+                    backgroundColor: 'white',
+                    marginTop: 20,
+                    borderRadius: 16,
+                    padding: '8px 16px',
+                  }}
+                >
+                  <span style={{ textAlign: 'center', fontSize: 20 }}>
+                    В апреле, в эти числа:
+                  </span>
+                  <span style={{ textAlign: 'center' }}>
+                    1, 7, 8, 15, 16, 22, 23, 29, 30
+                  </span>
+                  <span style={{ textAlign: 'center', fontSize: 20 }}>
+                    салон работать не будет, приносим извинения.
+                  </span>
                 </div>
               </div>
               <AntdRegistry>{children}</AntdRegistry>
