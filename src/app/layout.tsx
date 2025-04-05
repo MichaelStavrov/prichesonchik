@@ -230,7 +230,7 @@ export default function RootLayout({
                     В апреле, в эти числа:
                   </span>
                   <span style={{ textAlign: 'center' }}>
-                    1, 8, 9, 15, 16, 22, 23, 29, 30
+                    8, 9, 15, 19, 22, 23, 29, 30
                   </span>
                   <span style={{ textAlign: 'center', fontSize: 20 }}>
                     салон работать не будет, приносим извинения.
