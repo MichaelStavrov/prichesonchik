@@ -227,9 +227,11 @@ export default function RootLayout({
                   }}
                 >
                   <span style={{ textAlign: 'center', fontSize: 20 }}>
-                    В апреле, в эти числа:
+                    В мае, в эти числа:
                   </span>
-                  <span style={{ textAlign: 'center' }}>19, 20, 29, 30</span>
+                  <span style={{ textAlign: 'center' }}>
+                    1, 6, 9, 10, 13, 14
+                  </span>
                   <span style={{ textAlign: 'center', fontSize: 20 }}>
                     салон работать не будет, приносим извинения.
                   </span>
