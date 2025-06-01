@@ -139,17 +139,18 @@ const ServicesPage = () => {
   //   },
   // ];
 
-  // const manicure = [
-  //   { name: 'Маникюр с покрытием гель-лаком, укрепление', price: 'от 1 900' },
-  //   { name: 'Покрытие гель-лаком (без укрепления)', price: 'от 1 500' },
-  //   { name: 'Аппаратный маникюр', price: 'от 700' },
-  //   { name: 'Наращивание ногтей', price: 'от 2 300' },
-  //   { name: 'Комбинированный маникюр', price: 'от 700' },
-  //   { name: 'Дизайн ногтей', price: 'от 200' },
-  //   { name: 'Рисунок на ногте', price: 'от 300' },
-  //   { name: 'Необычная форма ногтей', price: 'от 2 700' },
-  //   { name: 'Снятие чужой работы', price: 'от 300' },
-  // ];
+  const manicure = [
+    { name: 'Маникюр с покрытием гель-лаком, укрепление', price: 'от 1 900' },
+    { name: 'Покрытие гель-лаком (без укрепления)', price: 'от 1 500' },
+    { name: 'Аппаратный маникюр', price: 'от 700' },
+    // { name: 'Наращивание ногтей', price: 'от 2 300' },
+    { name: 'Комбинированный маникюр', price: 'от 700' },
+    { name: 'Френч', price: 'от 600' },
+    { name: 'Дизайн ногтей', price: 'от 200' },
+    { name: 'Рисунок на ногте', price: 'от 300' },
+    { name: 'Необычная форма ногтей', price: 'от 2 700' },
+    { name: 'Снятие чужой работы', price: 'от 300' },
+  ];
 
   const services: Services[] = [
     {
@@ -209,12 +210,12 @@ const ServicesPage = () => {
     //   title: 'Аквагрим',
     //   imageSrc: '/services-item-img-aquagrim.jpg',
     // },
-    // {
-    //   id: SERVICES_ID.MANICURE,
-    //   items: manicure,
-    //   title: 'Маникюр',
-    //   imageSrc: '/services-item-img-manicure.jpg',
-    // },
+    {
+      id: SERVICES_ID.MANICURE,
+      items: manicure,
+      title: 'Маникюр',
+      imageSrc: '/services-item-img-manicure.jpg',
+    },
   ];
 
   const SERVICES_ITEM_IMG_WIDTH = 200;
