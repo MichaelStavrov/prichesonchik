@@ -10,8 +10,8 @@ const MainCarousel = () => {
   const IMAGE_HEIGHT = IMAGE_WIDTH / 0.6;
 
   const carouselItems = [
-    { src: '/dyeing-strands.jpg' },
     { src: '/carousel-main-img-7.jpg' },
+    { src: '/dyeing-strands.jpg' },
     { src: '/best-photo.jpg' },
     { src: '/carousel-main-img-9.jpg' },
     { src: '/sample-19.jpg' },
