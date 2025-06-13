@@ -163,7 +163,7 @@ const ServicesPage = () => {
       id: SERVICES_ID.BOYS,
       items: servicesBoys,
       title: 'Мальчики',
-      imageSrc: '/services-item-img-boy.jpg',
+      imageSrc: '/boy.jpg',
     },
     {
       id: SERVICES_ID.MENS,
@@ -175,7 +175,7 @@ const ServicesPage = () => {
       id: SERVICES_ID.WOMANS,
       items: servicesWomans,
       title: 'Женский зал',
-      imageSrc: '/services-item-img-women.jpg',
+      imageSrc: '/women-hairstyle.jpg',
     },
     {
       id: SERVICES_ID.COLORING,
