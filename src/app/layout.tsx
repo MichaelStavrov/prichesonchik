@@ -216,7 +216,7 @@ export default function RootLayout({
                     </div>
                   </div>
                 </div>
-                <div
+                {/* <div
                   className={styles.stockPrompt}
                   id='stock-prompt'
                   style={{
@@ -233,7 +233,7 @@ export default function RootLayout({
                   <span style={{ textAlign: 'center', fontSize: 20 }}>
                     салон работать не будет, приносим извинения.
                   </span>
-                </div>
+                </div> */}
               </div>
               <AntdRegistry>{children}</AntdRegistry>
               <div className={styles.regBtn}>
