@@ -34,6 +34,10 @@ const config: runtime.GetPrismaClientConfig = {
         "fromEnvVar": null,
         "value": "windows",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
@@ -47,6 +51,7 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -55,8 +60,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgres://186d3fc66bc8e26775d093306916ce2246277e24fbaddcc37b09b13f1549062a:sk_gszd8a-epsOFYNeG-i1FH@db.prisma.io:5432/postgres?sslmode=require\"\n}\n\nmodel User {\n  id    Int    @id @default(autoincrement())\n  phone String @unique\n  name  String\n}\n",
-  "inlineSchemaHash": "88419d4b50a92f1fd18a3d3761c02801c07e1397e62f0cdd532b60ae168c58be",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgres://186d3fc66bc8e26775d093306916ce2246277e24fbaddcc37b09b13f1549062a:sk_gszd8a-epsOFYNeG-i1FH@db.prisma.io:5432/postgres?sslmode=require\"\n}\n\nmodel User {\n  id    Int    @id @default(autoincrement())\n  phone String @unique\n  name  String\n}\n",
+  "inlineSchemaHash": "a23044afbfb46d2c00fba70a1bb3704548e80b90c57c3a87f08353865bcb60a0",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
