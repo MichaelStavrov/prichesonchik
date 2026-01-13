@@ -1,0 +1,30 @@
+
+.entryBtn {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  outline: none;
+
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.controls {
+  display: flex;
+  gap: 4px;
+}
+
+.input {
+  width: 200px;
+}
