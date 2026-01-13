@@ -1,15 +1,13 @@
-import React from 'react';
-import { getUser } from '../main';
+import CreateUserForm from '@/components/CreateUserForm/CreateUserForm';
+import UserList from '../../components/UserList/UserList';
 
-export const metadata = {
-  title: '',
-  description: '',
+const AdminPage = () => {
+  return (
+    <div>
+      <CreateUserForm />
+      <UserList />
+    </div>
+  );
 };
 
-const ContactsPage = async () => {
-  const users = await getUser();
-
-  return <div>{users?.name}</div>;
-};
-
-export default ContactsPage;
+export default AdminPage;

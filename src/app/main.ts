@@ -10,23 +10,19 @@ const prisma = new PrismaClient({ adapter });
 export { prisma };
 // Example query to create a user based on the example schema
 
-export async function createUser() {
+export async function createUser(name: string, phone: string) {
   const user = await prisma.user.create({
     data: {
-      name: 'Alice',
-      phone: '79151234567',
+      name,
+      phone,
     },
   });
 
-  console.log(user);
+  return user;
 }
 
 export const getUser = async () => {
-  const user = await prisma.user.findFirst({
-    where: {
-      name: 'Alice',
-    },
-  });
+  const user = await prisma.user.findMany();
 
   return user;
 };
