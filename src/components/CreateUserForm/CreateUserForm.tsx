@@ -11,7 +11,7 @@ const CreateUserForm = () => {
     const name = formData.get('name') as string;
     const phone = formData.get('phone') as string;
 
-    await createUser(name, phone);
+    await createUser(name, phone, 'CLIENT');
 
     revalidatePath('/admin');
     redirect('/admin');

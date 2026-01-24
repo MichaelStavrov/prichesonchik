@@ -60,8 +60,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n  engineType    = \"client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgres://186d3fc66bc8e26775d093306916ce2246277e24fbaddcc37b09b13f1549062a:sk_gszd8a-epsOFYNeG-i1FH@db.prisma.io:5432/postgres?sslmode=require\"\n}\n\nmodel User {\n  id    Int    @id @default(autoincrement())\n  phone String @unique\n  name  String\n}\n",
-  "inlineSchemaHash": "d57585eeeb4e71bdfba844b896fa55151a994acfa375b85022cea81dacf0693b",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n  engineType    = \"client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = \"postgres://186d3fc66bc8e26775d093306916ce2246277e24fbaddcc37b09b13f1549062a:sk_gszd8a-epsOFYNeG-i1FH@db.prisma.io:5432/postgres?sslmode=require\"\n}\n\nmodel User {\n  id    Int      @id @default(autoincrement())\n  phone String   @unique\n  name  String\n  role  UserRole @default(REGULAR)\n}\n\nenum UserRole {\n  REGULAR\n  CLIENT\n  ADMIN\n}\n",
+  "inlineSchemaHash": "3ed3874d4691a8329deed0fa9a0b969804ffbbd2e2a48c1e57e50925410ac10b",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
@@ -71,7 +71,7 @@ const config: runtime.GetPrismaClientConfig = {
   "dirname": ""
 }
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"phone\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"phone\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"role\",\"kind\":\"enum\",\"type\":\"UserRole\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 config.engineWasm = undefined
 
 async function decodeBase64AsWasm(wasmBase64: string): Promise<WebAssembly.Module> {
