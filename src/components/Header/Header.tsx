@@ -8,7 +8,7 @@ import Navigation from '../Navigation';
 import OnlineReg from '../OnlineReg';
 import styles from './Header.module.scss';
 import { MenuContext } from '@/store/MenuContext';
-import HiddenAdminEntryPoint from '../HiddenAdminEntryPoint/HiddenAdminEntryPoint';
+// import HiddenAdminEntryPoint from '../HiddenAdminEntryPoint/HiddenAdminEntryPoint';
 
 const Header = () => {
   const router = useRouter();
@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <HiddenAdminEntryPoint />
+      {/* <HiddenAdminEntryPoint /> */}
       <div className={styles.container}>
         <MenuOutlined
           className={styles.burgerBtn}

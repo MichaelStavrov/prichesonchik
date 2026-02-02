@@ -175,7 +175,7 @@ export default function RootLayout({
                       className={cn(
                         shantellSans.className,
                         styles.promo,
-                        styles.promoHidden
+                        styles.promoHidden,
                       )}
                     >
                       Для детей и взрослых

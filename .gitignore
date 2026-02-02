@@ -19,6 +19,7 @@
 
 # production
 /build
+/_static
 
 # misc
 .DS_Store
@@ -41,3 +42,12 @@ yarn-error.log*
 next-env.d.ts
 
 /app/generated/prisma
+.env*.local
+
+/src/generated/prisma
+
+/src/generated/prisma
+
+/src/generated/prisma
+
+/src/generated/prisma

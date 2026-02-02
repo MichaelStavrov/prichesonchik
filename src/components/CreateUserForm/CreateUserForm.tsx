@@ -1,20 +1,19 @@
 import { Button, Input } from 'antd';
-import { createUser } from '@/app/main';
+// import { createUser } from '@/app/main';
 import Form from 'next/form';
-import { revalidatePath } from 'next/cache';
-import { redirect } from 'next/navigation';
+// import { revalidatePath } from 'next/cache';
+// import { redirect } from 'next/navigation';
+
 
 const CreateUserForm = () => {
-  async function addUser(formData: FormData) {
-    'use server';
-
-    const name = formData.get('name') as string;
-    const phone = formData.get('phone') as string;
-
-    await createUser(name, phone, 'CLIENT');
-
-    revalidatePath('/admin');
-    redirect('/admin');
+  async function addUser() {
+    // formData: FormData
+    // ('use server');
+    // const name = formData.get('name') as string;
+    // const phone = formData.get('phone') as string;
+    // await createUser(name, phone);
+    // revalidatePath('/admin');
+    // redirect('/admin');
   }
 
   return (
