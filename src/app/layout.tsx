@@ -175,7 +175,7 @@ export default function RootLayout({
                       className={cn(
                         shantellSans.className,
                         styles.promo,
-                        styles.promoHidden,
+                        styles.promoHidden
                       )}
                     >
                       Для детей и взрослых
@@ -227,11 +227,10 @@ export default function RootLayout({
                   }}
                 >
                   <span style={{ textAlign: 'center', fontSize: 20 }}>
-                    В <strong>сентябре</strong>, в эти числа:
+                    Узнайте про наши актуальные акции на странице «Акции».
                   </span>
-                  <span style={{ textAlign: 'center' }}>15, 16</span>
-                  <span style={{ textAlign: 'center', fontSize: 20 }}>
-                    салон работать не будет, приносим извинения.
+                  <span style={{ textAlign: 'center' }}>
+                    Перейдите в раздел «Акции» в верхнем меню.
                   </span>
                 </div> */}
               </div>
@@ -241,6 +240,26 @@ export default function RootLayout({
               </div>
             </main>
             <Footer />
+            <Script
+              id='localbusiness-jsonld'
+              type='application/ld+json'
+              strategy='afterInteractive'
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'LocalBusiness',
+                  name: 'Семейная парикмахерская Причесончик',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Сергиев Посад',
+                    streetAddress: 'Вокзальная площадь, 1, ТЦ Преображенский',
+                    addressCountry: 'RU',
+                  },
+                  telephone: '+7-925-255-19-49',
+                  openingHours: 'Mo-Su 10:00-19:00',
+                }),
+              }}
+            />
             <script
               defer
               type='text/javascript'

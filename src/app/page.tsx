@@ -4,7 +4,7 @@ import MainCarousel from '@/components/MainCarousel';
 import styles from './page.module.css';
 import SimpleCard from '@/components/SimpleCard';
 
-export default async function Home() {
+export default function Home() {
   const advantages = [
     {
       title: 'Творческий подход персонала',
