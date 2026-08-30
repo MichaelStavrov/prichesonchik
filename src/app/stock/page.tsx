@@ -13,30 +13,7 @@ const StockPage = () => {
   const IMAGE_WIDTH = 200;
   const IMAGE_HEIGHT = IMAGE_WIDTH / 0.7;
 
-  const imageSixFreeWidth = 256;
-  const imageSixFreeHeight = imageSixFreeWidth / 1.8;
-
   const stockItems = [
-    {
-      name: 'Карточка на бесплатную стрижку',
-      img: '/six-free.jpg',
-      imgSize: { width: imageSixFreeWidth, height: imageSixFreeHeight },
-      desc: (
-        <div className={styles.stockItemDesc}>
-          <p>
-            Семейная студия красоты Причесончик рада вам сообщить, что теперь у
-            нас действуют карточки постоянных клиентов, по которым каждая 6-я
-            стрижка бесплатно!
-          </p>
-          <p>Карточку выдаем каждому клиенту при посещении нашего салона.</p>
-          <p>
-            Одной карточкой может пользоваться вся семья, а это значит, что для
-            традиционной семьи из 3-х, 4-х человек, бесплатные стрижки будут
-            частым и приятным бонусом!
-          </p>
-        </div>
-      ),
-    },
     {
       name: 'Пенсионерам на стрижки скидка до 50%!',
       img: '/stock-4.jpg',
@@ -65,19 +42,16 @@ const StockPage = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>Наши текущие акции</h1>
         <div className={styles.stockList}>
-          {stockItems.map(({ name, img, desc, imgSize }) => (
+          {stockItems.map(({ name, img, desc }) => (
             <SimpleCard key={name}>
               <div className={styles.stockItem}>
                 <span className={styles.stockTitleMob}>{name}</span>
                 <Image
                   className={styles.stockImage}
-                  style={{
-                    border: imgSize ? '1px solid var(--primary)' : 'none',
-                  }}
                   src={img}
                   alt=''
-                  width={imgSize?.width ?? IMAGE_WIDTH}
-                  height={imgSize?.height ?? IMAGE_HEIGHT}
+                  width={IMAGE_WIDTH}
+                  height={IMAGE_HEIGHT}
                 />
                 <div className={styles.stockContent}>
                   <span className={styles.stockTitle}>{name}</span>
