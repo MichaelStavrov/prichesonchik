@@ -38,7 +38,7 @@ const ContactsPage = () => {
           </div>
           <div className={styles.contactsRow}>
             <span className={styles.contactsName}>График работы:</span>
-            <span>Ежедневно с&nbsp;10.00&nbsp;до&nbsp;20.00</span>
+            <span>Пн, Чт-Вс: с&nbsp;10.00&nbsp;до&nbsp;20.00</span>
           </div>
           <div className={styles.contactsRow}>
             <span className={styles.contactsName}>ВКонтакте:</span>

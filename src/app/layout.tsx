@@ -139,7 +139,7 @@ export default function RootLayout({
                             <ClockCircleFilled
                               className={styles.contactsItemIcon2}
                             />
-                            <span>Ежедневно с&nbsp;10.00 до&nbsp;20.00</span>
+                            <span>Пн, Чт-Вс: с&nbsp;10.00 до&nbsp;20.00</span>
                           </div>
                           <div className={styles.contactsItem}>
                             <CompassFilled
@@ -193,7 +193,7 @@ export default function RootLayout({
                             <ClockCircleFilled
                               className={styles.contactsItemIcon2}
                             />
-                            <span>Ежедневно с&nbsp;10.00 до&nbsp;20.00</span>
+                            <span>Пн, Чт-Вс: с&nbsp;10.00 до&nbsp;20.00</span>
                           </div>
                           <div className={styles.contactsItem}>
                             <CompassFilled
@@ -256,7 +256,10 @@ export default function RootLayout({
                     addressCountry: 'RU',
                   },
                   telephone: '+7-925-255-19-49',
-                  openingHours: 'Mo-Su 10:00-19:00',
+                  openingHours: [
+                    'Mo 10:00-20:00',
+                    'Th-Su 10:00-20:00',
+                  ],
                 }),
               }}
             />
