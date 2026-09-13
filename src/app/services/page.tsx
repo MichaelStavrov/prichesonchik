@@ -76,31 +76,6 @@ const ServicesPage = () => {
     },
   ];
 
-  const piercing: ServicesItems[] = [
-    {
-      name: (
-        <span className={styles.serviceBlockArticle}>
-          <span>Прокол ушей детям и взрослым.</span>
-          <span>
-            Прокол осуществляется сертифицированной системой Studex R993.
-            Инструмент гарантирует полную стерильность и качественный быстрый
-            прокол.
-          </span>
-          <span>
-            Оригинальный механизм позволяет раздвинуть ткани, обеспечивая
-            минимальный дискомфорт и быстрое заживление.
-          </span>
-          <span>
-            В стоимость прокола входят оригинальные серьги из гипоаллергенной
-            нержавеющей стали. В подарок грамота за смелость!
-          </span>
-          <b>По предварительной записи!</b>
-        </span>
-      ),
-      price: '2 300',
-    },
-  ];
-
   // const brows: ServicesItems[] = [
   //   { name: 'Ламинирование бровей - полный комплекс', price: '2 100' },
   //   { name: 'Ламинирование бровей без окрашивания/коррекции', price: '1800' },
@@ -181,12 +156,6 @@ const ServicesPage = () => {
       title: 'Окрашивание',
       imageSrc: '/stock-1.jpg',
     },
-    {
-      id: SERVICES_ID.PIERCING,
-      items: piercing,
-      title: 'Прокол ушей',
-      imageSrc: '/services-item-img-piercing.jpg',
-    },
     // {
     //   id: SERVICES_ID.BROWS,
     //   items: brows,
@@ -234,53 +203,28 @@ const ServicesPage = () => {
           <SimpleCard key={id} justifyContent='space-between'>
             <div className={styles.servicesItemBlock} id={id}>
               <h2 className={styles.servicesItemTitle}>{title}</h2>
-              {[SERVICES_ID.AQUAGRIM, SERVICES_ID.PIERCING].includes(id) ? (
-                <div>
+              <div className={styles.servicesItemContent}>
+                <div className={styles.servicesItemContentContainer}>
                   {items.map(({ name, price }) => (
                     <div
-                      className={styles.servicesItemContent}
                       key={name?.toLocaleString()}
+                      className={styles.servicesItemRow}
                     >
-                      <div
-                        className={styles.servicesItemContentColoringLeftBlock}
-                      >
-                        <p>{name}</p>
-                        <span>{price} &#8381;</span>
-                      </div>
-                      <Image
-                        className={styles.servicesItemImage}
-                        src={imageSrc}
-                        alt={title}
-                        width={SERVICES_ITEM_IMG_WIDTH}
-                        height={SERVICES_ITEM_IMG_WIDTH / 0.75}
-                      />
+                      <span>{name}</span>
+                      <span className={styles.servicesItemPrice}>
+                        {price} &#8381;
+                      </span>
                     </div>
                   ))}
                 </div>
-              ) : (
-                <div className={styles.servicesItemContent}>
-                  <div className={styles.servicesItemContentContainer}>
-                    {items.map(({ name, price }) => (
-                      <div
-                        key={name?.toLocaleString()}
-                        className={styles.servicesItemRow}
-                      >
-                        <span>{name}</span>
-                        <span className={styles.servicesItemPrice}>
-                          {price} &#8381;
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                  <Image
-                    className={styles.servicesItemImage}
-                    src={imageSrc}
-                    alt={title}
-                    width={SERVICES_ITEM_IMG_WIDTH}
-                    height={SERVICES_ITEM_IMG_WIDTH / 0.75}
-                  />
-                </div>
-              )}
+                <Image
+                  className={styles.servicesItemImage}
+                  src={imageSrc}
+                  alt={title}
+                  width={SERVICES_ITEM_IMG_WIDTH}
+                  height={SERVICES_ITEM_IMG_WIDTH / 0.75}
+                />
+              </div>
               {description}
             </div>
           </SimpleCard>

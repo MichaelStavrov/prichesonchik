@@ -31,7 +31,7 @@ const inter = Inter({ subsets: ['cyrillic'] });
 export const metadata: Metadata = {
   title: 'Семейная парикмахерская Причесончик Сергиев Посад',
   description:
-    'детский, семейный, салон красоты, стрижки детей, прокол ушей, мужские стрижки, женские стрижки, окрашивание',
+    'детский, семейный, салон красоты, стрижки детей, мужские стрижки, женские стрижки, окрашивание',
 };
 
 const theme: ThemeConfig = {
@@ -50,7 +50,6 @@ export enum SERVICES_ID {
   MENS = 'mens',
   WOMANS = 'womans',
   COLORING = 'coloring',
-  PIERCING = 'piercing',
   AQUAGRIM = 'aquagrim',
   MANICURE = 'manicure',
   BROWS = 'brows',
@@ -60,7 +59,6 @@ const services = [
   { name: 'Детские стрижки', id: SERVICES_ID.GIRLS },
   { name: 'Взрослые стрижки', id: SERVICES_ID.MENS },
   { name: 'Окрашивание', id: SERVICES_ID.COLORING },
-  { name: 'Прокол ушей', id: SERVICES_ID.PIERCING },
   // { name: 'Брови', id: SERVICES_ID.BROWS },
   // { name: 'Аквагрим', id: SERVICES_ID.AQUAGRIM },
   // { name: 'Маникюр', id: SERVICES_ID.MANICURE },
